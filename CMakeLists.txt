@@ -79,7 +79,7 @@ ${PROJECT_NAME}
 		${SDL2_TTF_LIBRARY}
 		${SDL2_MIXER_LIBRARY}
 )
-#adding a bash script for copying the resource folder
+#this is a bash script for copying the resource folder
 #add_custom_command(
 #	TARGET ${PROJECT_NAME} POST_BUILD
 #		COMMAND ${CMAKE_COMMAND -E copy_directory
