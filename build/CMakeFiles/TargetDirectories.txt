@@ -1,0 +1,3 @@
+/home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/build/CMakeFiles/Scaling_and_Alphablending.dir
+/home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/build/CMakeFiles/edit_cache.dir
+/home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/build/CMakeFiles/rebuild_cache.dir

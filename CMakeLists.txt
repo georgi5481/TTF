@@ -5,7 +5,7 @@ include(${CMAKE_CURRENT_SOURCE_DIR}/cmake_helpers/helpers.cmake)
 set(CMAKE_MODULE_PATH 
 	${CMAKE_MODULE_PATH} ${CMAKE_MODULE_PATH}/cmake_helpers/find_modules)
 
-project(Hardware_Rendering LANGUAGES CXX)	#first instance the project and the language
+project(Scaling_and_Alphablending LANGUAGES CXX)	#first instance the project and the language
 
 if(UNIX)
 	set(SDL2_image_name SDL2_image)
@@ -17,7 +17,7 @@ elseif(WIN32 OR APPLE)
 	set(SDL2_mixer_name SDL2_MIXER)
 endif()
 
-	find_package(SDL2 REQUIRED)	#first one doesnt need to change
+	find_package(SDL2 REQUIRED)					#first one doesnt need to change
 	find_package(${SDL2_image_name} REQUIRED)	#using the three variables we just used and set
 	find_package(${SDL2_ttf_name} REQUIRED)
 	find_package(${SDL2_mixer_name} REQUIRED)
