@@ -19,7 +19,6 @@ int32_t Renderer::init(SDL_Window * window){
 	 * 1 the window(pointer) where rendering is displayed,
 	 * 2 setting -1 for using default driver(DiretX in this case)
 	 * 3 A flag for using the hardware acceleration instead of CPU.*/
-
 	constexpr auto unspecifiedDriverId = -1;
 	_sdlRenderer = SDL_CreateRenderer(window, unspecifiedDriverId, SDL_RENDERER_ACCELERATED);
 	if(_sdlRenderer == nullptr)
@@ -65,7 +64,13 @@ void Renderer::renderTexture(SDL_Texture* texture){//SDL_Texture is a primitive 
 	 * second - The source texture
 	 * third - NULL for the entire texture to be displayed
 	 * fourth - NULL for the entire rendering target*/
-	SDL_RenderCopy(_sdlRenderer, texture, nullptr, nullptr);
+
+
+	const int32_t error = SDL_RenderCopy(_sdlRenderer, texture, nullptr, nullptr);
+
+	if(EXIT_SUCCESS != error) {
+		std::cout << "RenderCopy() failed. Reason : " << SDL_GetError() << std::endl;
+	}
 }
 
 
