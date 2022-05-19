@@ -4,10 +4,11 @@
 //C system includes
 
 //C++ system includes
-#include <iostream>
+#include<iostream>
 
 //3rd-party includes
 #include <SDL_render.h>
+#include<SDL_hints.h>
 
 //Own includes
 #include"sdl_utils/Texture.h"
@@ -19,6 +20,13 @@ int32_t Renderer::init(SDL_Window * window){
 	 * 1 the window(pointer) where rendering is displayed,
 	 * 2 setting -1 for using default driver(DiretX in this case)
 	 * 3 A flag for using the hardware acceleration instead of CPU.*/
+
+	if(!SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1")){
+		std::cerr << "Warning: Linear texture filtering not enabled ! "
+				"SDL_SetHint() failed. SDL Error:" << SDL_GetError() << std::endl;
+		return EXIT_FAILURE;
+	}
+
 	constexpr auto unspecifiedDriverId = -1;
 	_sdlRenderer = SDL_CreateRenderer(window, unspecifiedDriverId, SDL_RENDERER_ACCELERATED);
 	if(_sdlRenderer == nullptr)
