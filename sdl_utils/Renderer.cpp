@@ -16,16 +16,18 @@
 
 
 int32_t Renderer::init(SDL_Window * window){
-	/*giving the SDL_CreateRenderer function:
-	 * 1 the window(pointer) where rendering is displayed,
-	 * 2 setting -1 for using default driver(DiretX in this case)
-	 * 3 A flag for using the hardware acceleration instead of CPU.*/
-
+	//first we have to hint what we want to fix and then we have to render the image we want.
 	if(!SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1")){
 		std::cerr << "Warning: Linear texture filtering not enabled ! "
 				"SDL_SetHint() failed. SDL Error:" << SDL_GetError() << std::endl;
 		return EXIT_FAILURE;
 	}
+
+
+	/*giving the SDL_CreateRenderer function:
+	 * 1 the window(pointer) where rendering is displayed,
+	 * 2 setting -1 for using default driver(DiretX in this case)
+	 * 3 A flag for using the hardware acceleration instead of CPU.*/
 
 	constexpr auto unspecifiedDriverId = -1;
 	_sdlRenderer = SDL_CreateRenderer(window, unspecifiedDriverId, SDL_RENDERER_ACCELERATED);
