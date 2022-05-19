@@ -4,7 +4,7 @@
 //C system includes
 
 //C++ system includes
-#include<iostream>
+#include <iostream>
 
 //3rd-party includes
 #include <SDL_render.h>

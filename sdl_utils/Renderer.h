@@ -11,7 +11,7 @@
 //Own includes
 
 //Forward Declaration
-struct SDL_Renderer;	//structure pointer comming from SDL
+struct SDL_Renderer;	//structure pointer coming from SDL
 struct SDL_Texture;		//primitive that uploads the data from the CPU to the GPU
 struct SDL_Window;
 
