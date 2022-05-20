@@ -31,7 +31,7 @@ int32_t SDLLoader::init(){
 
 	constexpr int32_t imgFlags = IMG_INIT_PNG;
 	if(! (IMG_Init(imgFlags) & imgFlags)){
-		std::cerr << "SDL image could not be initialised! SDL_miage Error:" <<
+		std::cerr << "SDL image could not be initialised! SDL_masage Error:" <<
 				IMG_GetError() << std::endl;
 		return EXIT_FAILURE;
 	}

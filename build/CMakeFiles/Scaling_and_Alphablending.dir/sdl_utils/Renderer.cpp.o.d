@@ -181,4 +181,5 @@ CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/Renderer.cpp.o: \
  /usr/include/SDL2/SDL_pixels.h /usr/include/SDL2/SDL_endian.h \
  /usr/include/SDL2/SDL_rwops.h /usr/include/SDL2/SDL_video.h \
  /usr/include/SDL2/SDL_surface.h /usr/include/SDL2/SDL_blendmode.h \
+ /usr/include/SDL2/SDL_hints.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/Texture.h

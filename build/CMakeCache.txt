@@ -379,7 +379,7 @@ SDL2_IMAGE_LIBRARY-ADVANCED:INTERNAL=1
 SDL2_IMAGE_NO_DEFAULT_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SDL2_IMAGE_PATH
 SDL2_IMAGE_PATH-ADVANCED:INTERNAL=1
-SDL2_LIBRARY_TEMP:INTERNAL=/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2.so
+SDL2_LIBRARY_TEMP:INTERNAL=/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2main.a;/usr/lib/x86_64-linux-gnu/libSDL2.so
 //ADVANCED property for variable: SDL2_MIXER_INCLUDE_DIR
 SDL2_MIXER_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: SDL2_MIXER_LIBRARY
