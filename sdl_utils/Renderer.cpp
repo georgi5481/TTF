@@ -74,10 +74,7 @@ void Renderer::renderTexture(SDL_Texture* texture){//SDL_Texture is a primitive 
 	 * second - The source texture
 	 * third - NULL for the entire texture to be displayed
 	 * fourth - NULL for the entire rendering target*/
-
-	const SDL_Rect rect = {.x = 0 , .y = 0, .w = 1500, .h = 1500};
-
-	const int32_t error = SDL_RenderCopy(_sdlRenderer, texture, nullptr, &rect);
+	const int32_t error = SDL_RenderCopy(_sdlRenderer, texture, nullptr, nullptr);
 
 	if(EXIT_SUCCESS != error) {
 		std::cout << "RenderCopy() failed. Reason : " << SDL_GetError() << std::endl;
