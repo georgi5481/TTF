@@ -78,7 +78,7 @@ void Renderer::renderTexture(SDL_Texture* texture, const DrawParams& drawParams)
 	 * second - The source texture
 	 * third - NULL for the entire texture to be displayed
 	 * fourth - NULL for the entire rendering target*/
-	const int32_t error = SDL_RenderCopy(_sdlRenderer, texture, nullptr, nullptr);
+	const int32_t error = SDL_RenderCopy(_sdlRenderer, texture, nullptr, destRect);
 
 	if(EXIT_SUCCESS != error) {
 		std::cout << "RenderCopy() failed. Reason : " << SDL_GetError() << std::endl;

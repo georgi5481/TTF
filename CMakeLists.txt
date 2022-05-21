@@ -57,6 +57,9 @@ add_executable(
 	${_BASE_DIR}/sdl_utils/Renderer.cpp
 	${_BASE_DIR}/sdl_utils/Renderer.h
 	
+	${_BASE_DIR}/sdl_utils/containers/ImageContainer.cpp
+	${_BASE_DIR}/sdl_utils/containers/ImageContainer.h	
+	
 	${_BASE_DIR}/main.cpp
 	)
 
