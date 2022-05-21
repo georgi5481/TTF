@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/SDLLoader.cpp.o.d"
   "CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/Texture.cpp.o"
   "CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/Texture.cpp.o.d"
+  "CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.o"
+  "CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.o.d"
   "CMakeFiles/Scaling_and_Alphablending.dir/utils/Time/Time.cpp.o"
   "CMakeFiles/Scaling_and_Alphablending.dir/utils/Time/Time.cpp.o.d"
   "CMakeFiles/Scaling_and_Alphablending.dir/utils/drawings/Point.cpp.o"

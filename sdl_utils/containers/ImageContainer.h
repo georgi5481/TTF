@@ -22,7 +22,7 @@ public:
 private:
 	std::unordered_map<int32_t, SDL_Texture*> _textures;
 
-	std::unordered_map<int32_t, Rectangle*> _textureFrames;
+	std::unordered_map<int32_t, Rectangle> _textureFrames;
 
 
 };

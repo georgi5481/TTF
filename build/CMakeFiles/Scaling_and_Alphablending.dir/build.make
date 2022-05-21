@@ -237,10 +237,24 @@ CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/Renderer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/Renderer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/Renderer.cpp -o CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/Renderer.cpp.s
 
+CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.o: CMakeFiles/Scaling_and_Alphablending.dir/flags.make
+CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.o: ../sdl_utils/containers/ImageContainer.cpp
+CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.o: CMakeFiles/Scaling_and_Alphablending.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.o -MF CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.o.d -o CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.o -c /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/containers/ImageContainer.cpp
+
+CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/containers/ImageContainer.cpp > CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.i
+
+CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/containers/ImageContainer.cpp -o CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.s
+
 CMakeFiles/Scaling_and_Alphablending.dir/main.cpp.o: CMakeFiles/Scaling_and_Alphablending.dir/flags.make
 CMakeFiles/Scaling_and_Alphablending.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Scaling_and_Alphablending.dir/main.cpp.o: CMakeFiles/Scaling_and_Alphablending.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Scaling_and_Alphablending.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Scaling_and_Alphablending.dir/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Scaling_and_Alphablending.dir/main.cpp.o -MF CMakeFiles/Scaling_and_Alphablending.dir/main.cpp.o.d -o CMakeFiles/Scaling_and_Alphablending.dir/main.cpp.o -c /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/main.cpp
 
 CMakeFiles/Scaling_and_Alphablending.dir/main.cpp.i: cmake_force
@@ -265,6 +279,7 @@ Scaling_and_Alphablending_OBJECTS = \
 "CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/Texture.cpp.o" \
 "CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/InputEvent.cpp.o" \
 "CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/Renderer.cpp.o" \
+"CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.o" \
 "CMakeFiles/Scaling_and_Alphablending.dir/main.cpp.o"
 
 # External object files for target Scaling_and_Alphablending
@@ -282,6 +297,7 @@ Scaling_and_Alphablending: CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/Mo
 Scaling_and_Alphablending: CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/Texture.cpp.o
 Scaling_and_Alphablending: CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/InputEvent.cpp.o
 Scaling_and_Alphablending: CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/Renderer.cpp.o
+Scaling_and_Alphablending: CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.o
 Scaling_and_Alphablending: CMakeFiles/Scaling_and_Alphablending.dir/main.cpp.o
 Scaling_and_Alphablending: CMakeFiles/Scaling_and_Alphablending.dir/build.make
 Scaling_and_Alphablending: /usr/lib/x86_64-linux-gnu/libSDL2main.a
@@ -290,7 +306,7 @@ Scaling_and_Alphablending: /usr/lib/x86_64-linux-gnu/libSDL2_image.so
 Scaling_and_Alphablending: /usr/lib/x86_64-linux-gnu/libSDL2_ttf.so
 Scaling_and_Alphablending: /usr/lib/x86_64-linux-gnu/libSDL2_mixer.so
 Scaling_and_Alphablending: CMakeFiles/Scaling_and_Alphablending.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable Scaling_and_Alphablending"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable Scaling_and_Alphablending"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Scaling_and_Alphablending.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

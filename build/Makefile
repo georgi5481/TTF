@@ -345,6 +345,30 @@ sdl_utils/Texture.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Scaling_and_Alphablending.dir/build.make CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/Texture.cpp.s
 .PHONY : sdl_utils/Texture.cpp.s
 
+sdl_utils/containers/ImageContainer.o: sdl_utils/containers/ImageContainer.cpp.o
+.PHONY : sdl_utils/containers/ImageContainer.o
+
+# target to build an object file
+sdl_utils/containers/ImageContainer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Scaling_and_Alphablending.dir/build.make CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.o
+.PHONY : sdl_utils/containers/ImageContainer.cpp.o
+
+sdl_utils/containers/ImageContainer.i: sdl_utils/containers/ImageContainer.cpp.i
+.PHONY : sdl_utils/containers/ImageContainer.i
+
+# target to preprocess a source file
+sdl_utils/containers/ImageContainer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Scaling_and_Alphablending.dir/build.make CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.i
+.PHONY : sdl_utils/containers/ImageContainer.cpp.i
+
+sdl_utils/containers/ImageContainer.s: sdl_utils/containers/ImageContainer.cpp.s
+.PHONY : sdl_utils/containers/ImageContainer.s
+
+# target to generate assembly for a file
+sdl_utils/containers/ImageContainer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Scaling_and_Alphablending.dir/build.make CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp.s
+.PHONY : sdl_utils/containers/ImageContainer.cpp.s
+
 utils/Time/Time.o: utils/Time/Time.cpp.o
 .PHONY : utils/Time/Time.o
 
@@ -477,6 +501,9 @@ help:
 	@echo "... sdl_utils/Texture.o"
 	@echo "... sdl_utils/Texture.i"
 	@echo "... sdl_utils/Texture.s"
+	@echo "... sdl_utils/containers/ImageContainer.o"
+	@echo "... sdl_utils/containers/ImageContainer.i"
+	@echo "... sdl_utils/containers/ImageContainer.s"
 	@echo "... utils/Time/Time.o"
 	@echo "... utils/Time/Time.i"
 	@echo "... utils/Time/Time.s"

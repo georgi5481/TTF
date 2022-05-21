@@ -171,6 +171,7 @@ CMakeFiles/Scaling_and_Alphablending.dir/main.cpp.o: \
  /usr/include/c++/11/bits/erase_if.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/MonitorWindow.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/Renderer.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/DrawParams.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/InputEvent.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/input/EventDefines.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/Engine/EngineConfigLoader.h \

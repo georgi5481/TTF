@@ -22,6 +22,8 @@ CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/Renderer.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/DrawParams.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/Point.h \
  /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
  /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
  /usr/include/c++/11/bits/stringfwd.h \

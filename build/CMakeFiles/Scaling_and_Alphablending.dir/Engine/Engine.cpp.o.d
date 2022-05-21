@@ -151,6 +151,7 @@ CMakeFiles/Scaling_and_Alphablending.dir/Engine/Engine.cpp.o: \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/Point.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/config/MonitorWindowCfg.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/Renderer.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/DrawParams.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/InputEvent.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/input/EventDefines.h \
  /usr/include/c++/11/iostream /usr/include/c++/11/ostream \

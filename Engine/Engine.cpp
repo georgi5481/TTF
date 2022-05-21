@@ -82,9 +82,11 @@ void Engine::drawFrame(){
 
 	_game.draw(images);
 
+/*
 	for(auto& image : images){
 	_renderer.renderTexture(image);
 	}
+*/
 
 		_renderer.finishFrame();	//update the image
 }
