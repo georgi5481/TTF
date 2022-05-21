@@ -15,6 +15,10 @@
 struct SDL_Texture;
 
 class ImageContainer {
+public:
+	SDL_Texture* getImageTexture(int32_t rsrcId) const;	//will basically search in the map below ( _textures )
+
+	Rectangle getImageFrame(int32_t rsrcId) const;		//this one will search in the other map below ( _textureFrames )
 private:
 	std::unordered_map<int32_t, SDL_Texture*> _textures;
 
