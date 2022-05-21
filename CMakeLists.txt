@@ -30,6 +30,7 @@ add_executable(
 	${_BASE_DIR}/utils/drawings/Point.cpp
 	${_BASE_DIR}/utils/drawings/Rectangle.h
 	${_BASE_DIR}/utils/drawings/Rectangle.cpp
+	${_BASE_DIR}/utils/drawings/DrawParams.h
 	${_BASE_DIR}/utils/thread/ThreadUtils.h
 	${_BASE_DIR}/utils/thread/ThreadUtils.cpp
 	${_BASE_DIR}/utils/Time/Time.h
