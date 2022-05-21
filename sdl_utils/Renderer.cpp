@@ -69,7 +69,11 @@ void Renderer::finishFrame(){
 	SDL_RenderPresent(_sdlRenderer);	//will swap the pointers
 }
 
-void Renderer::renderTexture(SDL_Texture* texture){//SDL_Texture is a primitive we are drawing
+void Renderer::renderTexture(SDL_Texture* texture, const DrawParams& drawParams){//SDL_Texture is a primitive we are drawing
+	const SDL_Rect destRect = {.x = drawParams.pos.x, .y = drawParams.pos.y,
+								.w = drawParams.width, .h = drawParams.height };
+
+
 	/*first argument - The renderer which should copy parts of a texture
 	 * second - The source texture
 	 * third - NULL for the entire texture to be displayed
