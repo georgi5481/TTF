@@ -27,6 +27,9 @@ public:
 
 	Rectangle getImageFrame(int32_t rsrcId) const;		//this one will search in the other map below ( _textureFrames )
 private:
+
+	int32_t loadSingleResource(const ImageCfg& resCfg, int32_t rsrcId);
+
 	std::unordered_map<int32_t, SDL_Texture*> _textures;
 
 	std::unordered_map<int32_t, Rectangle> _textureFrames;

@@ -21,7 +21,7 @@ struct ImageCfg {
 };
 
 struct ImageContainerCfg{
-	std::unordered_map<int32_t, ImageConfig> imageConfigs;
+	std::unordered_map<int32_t, ImageCfg> imageConfigs;
 };
 
 

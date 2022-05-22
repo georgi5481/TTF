@@ -9,7 +9,6 @@
 #include "sdl_utils/config/MonitorWindowCfg.h"
 
 //Own components includes
-#include "sdl_utils/Texture.h"
 #include "sdl_utils/InputEvent.h"
 
 
@@ -70,17 +69,3 @@ void Game::handleEvent(const InputEvent& e){
 }
 
 
-int32_t Game::loadResources(const std::unordered_map<Images, std::string>& res){
-
-for(const auto& pair : res){
-
-	const auto resId = pair.first;
-	const auto& resLocation = pair.second;
-
-	if(EXIT_SUCCESS != Texture::createTextureFromFile(resLocation, _imageSurfaces[resId])){
-			std::cerr << "createSurfaceFromFile failed for file : " << resLocation << std::endl;
-		return EXIT_FAILURE;
-		}
-}
-	return EXIT_SUCCESS;
-}

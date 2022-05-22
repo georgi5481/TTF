@@ -29,9 +29,6 @@ public:
 
 private:
 
-
-	int32_t loadResources(const std::unordered_map<Images, std::string>& res);
-
 	//game specific logic
 	SDL_Texture* _currChosenImage = nullptr;	//the image we are presenting atm
 	SDL_Texture* _imageSurfaces[COUNT]{};		//an array of our Surfaces loaded basically in the heap
