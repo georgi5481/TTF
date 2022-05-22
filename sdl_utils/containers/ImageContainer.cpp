@@ -12,6 +12,15 @@
 #include "sdl_utils/Texture.h"
 
 int32_t ImageContainer::init(const ImageContainerCfg& cfg){
+	for(const auto& pair : cfg.imageConfigs)
+	{
+		const auto& elem = pair.second;
+		const auto rsrcId = pair.first;
+		if(EXIT_SUCCESS !=loadSingleResource(elem, rsrcId)){
+				std::cerr << "loadSingleResource failed for file : " << elem.location << std::endl;
+			return EXIT_FAILURE;
+			}
+	}
 
 
 	return EXIT_SUCCESS;
@@ -19,7 +28,10 @@ int32_t ImageContainer::init(const ImageContainerCfg& cfg){
 
 
 int32_t ImageContainer::deinit(){
-
+	for(auto& pair : _textures)	//we dont need const reference since we are going to modificate the texture.
+	{
+		Texture::freeTexture(pair.second);
+	}
 
 	return EXIT_SUCCESS;
 }

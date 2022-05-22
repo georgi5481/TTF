@@ -30,9 +30,9 @@ private:
 
 	int32_t loadSingleResource(const ImageCfg& resCfg, int32_t rsrcId);
 
-	std::unordered_map<int32_t, SDL_Texture*> _textures;
+	std::unordered_map<int32_t, SDL_Texture*> _textures;	//in the first we are saving the ID and the texture
 
-	std::unordered_map<int32_t, Rectangle> _textureFrames;
+	std::unordered_map<int32_t, Rectangle> _textureFrames;	//in the second we are saving the ID and the rectangle dimensions
 
 
 };
