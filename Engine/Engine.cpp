@@ -16,6 +16,7 @@
 #include "utils/Time/Time.h"
 #include "Engine/EngineConfigLoader.h"
 
+
 int32_t Engine::init(const EngineConfig& cfg){
 	if (EXIT_SUCCESS != _window.init(cfg.windowCfg)){	//load the resources in the window
 			std::cerr << "loadResources() failed. Reason: " << std::endl;

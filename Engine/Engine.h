@@ -14,6 +14,7 @@
 #include "sdl_utils/MonitorWindow.h"
 #include "sdl_utils/Renderer.h"
 #include "sdl_utils/InputEvent.h"
+#include "sdl_utils/containers/ImageContainer.h"
 
 //Forward Declaration
 struct EngineConfig;
