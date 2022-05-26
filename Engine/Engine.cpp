@@ -18,18 +18,19 @@
 
 
 int32_t Engine::init(const EngineConfig& cfg){
-	if (EXIT_SUCCESS != _window.init(cfg.windowCfg)){	//load the resources in the window
+
+	if (EXIT_SUCCESS != _window.init(cfg.windowCfg)){		//load the size of the window
 			std::cerr << "loadResources() failed. Reason: " << std::endl;
 			return EXIT_FAILURE;
 	}
 
-	if (EXIT_SUCCESS != _renderer.init(_window.getWindow())){
+	if (EXIT_SUCCESS != _renderer.init(_window.getWindow())){		//get the render algorithm
 			std::cerr << "render init() failed. Reason: " << std::endl;
 			return EXIT_FAILURE;
 	}
 
 
-	if (EXIT_SUCCESS != _event.init()){	//load the resources in the window
+	if (EXIT_SUCCESS != _event.init()){			//see what event occurred
 			std::cerr << "InputEvent failed. Reason: " << std::endl;
 			return EXIT_FAILURE;
 	}
