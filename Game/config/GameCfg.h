@@ -17,7 +17,8 @@ enum Images{
 };
 
 struct GameCfg {
-std::unordered_map<Images, std::string> imgPaths;	//will give us the path of the wanted image
+	int32_t dummy;
 };
+
 
 #endif /* GAME_CONFIG_GAMECFG_H_ */

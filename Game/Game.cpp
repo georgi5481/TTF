@@ -13,10 +13,7 @@
 
 
 int32_t Game::init(const GameCfg& cfg){
-	if (EXIT_SUCCESS != loadResources(cfg.imgPaths)){	//load the resources in the window
-			std::cerr << "loadResources() failed. Reason: " << std::endl;
-			return EXIT_FAILURE;
-	}
+
 
 	_currChosenImage = _imageSurfaces[PRESS_KEYS];
 

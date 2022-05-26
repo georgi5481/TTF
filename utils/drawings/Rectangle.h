@@ -14,7 +14,7 @@
 //Forward Declaration
 
 
-struct Rectangle {
+struct Rectangle {			//the rectangle of the window
 	Rectangle() = default;
 	Rectangle(int32_t inputX, int32_t inputY,
 				int32_t inputHeight, int32_t inputWidth);
