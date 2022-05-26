@@ -70,7 +70,7 @@ int32_t ImageContainer::loadSingleResource(const ImageCfg& resCfg, int32_t rsrcI
 	_textures[rsrcId] = texture;
 
 	//a good practice is to take out the reference, and then implement the values. Don't always search in the map with the key.
-	Rectangle& rect = _textureFrames[rsrcId];
+	Rectangle& rect = _textureFrames[rsrcId];	//using this way the reference is so much better
 	rect.x = 0;
 	rect.y = 0;
 	rect.w = resCfg.width;

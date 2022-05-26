@@ -39,7 +39,7 @@ private:
 	MonitorWindow _window;
 	InputEvent _event;
 	Renderer _renderer;
-
+	ImageContainer _imgContainer;
 	Game _game;
 };
 
