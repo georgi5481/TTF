@@ -29,8 +29,12 @@ int32_t Engine::init(const EngineConfig& cfg){
 			return EXIT_FAILURE;
 	}
 
+	if (EXIT_SUCCESS != _imgContainer.init(cfg.imageContainerCfg)){		//initialising the image container logic (a simple map  with int as ID and string as the path)
+			std::cerr << "imgContainer init() failed. Reason: " << std::endl;
+			return EXIT_FAILURE;
+	}
 
-	if (EXIT_SUCCESS != _event.init()){			//see what event occurred
+	if (EXIT_SUCCESS != _event.init()){			//scan what event occurred
 			std::cerr << "InputEvent failed. Reason: " << std::endl;
 			return EXIT_FAILURE;
 	}
