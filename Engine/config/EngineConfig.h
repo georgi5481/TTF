@@ -11,6 +11,7 @@
 //Own includes
 #include "sdl_utils/config/MonitorWindowCfg.h"
 #include "sdl_utils/config/ImageContainerCfg.h"
+#include "Game/config/GameCfg.h"
 
 //Forward Declaration
 
