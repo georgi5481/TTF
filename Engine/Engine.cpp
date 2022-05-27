@@ -14,7 +14,7 @@
 #include "Engine/config/EngineConfig.h"
 #include "utils/thread/ThreadUtils.h"
 #include "utils/Time/Time.h"
-#include "Engine/EngineConfigLoader.h"
+#include "Game/config/GameCfg.h"
 
 
 int32_t Engine::init(const EngineConfig& cfg){
@@ -39,8 +39,9 @@ int32_t Engine::init(const EngineConfig& cfg){
 			return EXIT_FAILURE;
 	}
 
+	const GameCfg gameCfg= {.dummy = 1337};
 
-	if (EXIT_SUCCESS != _game.init(cfg.gameCfg)){	//load the resources in the window
+	if (EXIT_SUCCESS != _game.init(gameCfg)){	//load the resources in the window
 			std::cerr << "_game.init() failed." << std::endl;
 			return EXIT_FAILURE;
 	}
@@ -52,9 +53,10 @@ return EXIT_SUCCESS;
 
 
 
-void Engine::deinit(){	//always deinitialise backwards according to initialising
+void Engine::deinit(){	//always deinitialise backwards according to initialisings
 	_game.deinit();
 	_event.deinit();
+	_imgContainer.deinit();
 	_renderer.deinit();
 	_window.deinit();
 }
