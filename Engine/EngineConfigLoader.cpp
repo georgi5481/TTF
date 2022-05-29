@@ -6,11 +6,11 @@
 #include<cstdint>
 
 //3rd-party includes
-#include "sdl_utils/config/MonitorWindowCfg.h"
+
 
 //Own includes
 
-namespace{
+namespace{		//the anonymous namespace will work only on this .cpp file
 constexpr auto WINDOW_WIDTH = 640;
 constexpr auto WINDOW_HEIGHT = 480;
 constexpr auto WINDOW_NAME = "Hardware_Redering";
@@ -24,7 +24,14 @@ static void populateMonitorConfig(MonitorWindowCfg& cfg){
 }
 
 
+/*
 static void populateGameConfig(GameCfg& cfg){
+
+
+}
+*/
+
+static void populateImageContainerConfig(ImageContainerCfg& cfg){
 
 	cfg.imgPaths[UP] = "../resources/up.png";
 	cfg.imgPaths[DOWN] = "../resources/down.png";
