@@ -13,7 +13,7 @@
 //Forward Declaration
 
 enum Images{
-	UP, DOWN, LEFT, RIGHT, PRESS_KEYS, LAYER_2, COUNT
+	PRESS_KEYS, LAYER_2, COUNT
 };
 
 struct GameCfg {

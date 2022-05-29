@@ -13,10 +13,7 @@
 namespace TextureId {
 
 enum ResourceId {
-	UP,
-	DOWN,
-	LEFT,
-	RIGHT,
+
 	PRESS_KEYS,
 	LAYER_2
 };
