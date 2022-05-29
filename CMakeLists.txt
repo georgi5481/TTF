@@ -26,6 +26,8 @@ set(_BASE_DIR ${CMAKE_CURRENT_SOURCE_DIR})	#set a variable name
 
 add_executable(
 	${PROJECT_NAME} 	
+	${_BASE_DIR}/common/commonDefines.h
+		
 	${_BASE_DIR}/utils/drawings/Point.h
 	${_BASE_DIR}/utils/drawings/Point.cpp
 	${_BASE_DIR}/utils/drawings/Rectangle.h
