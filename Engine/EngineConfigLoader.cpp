@@ -64,7 +64,7 @@ EngineConfig EngineConfigLoader::loadConfig(){
 	EngineConfig cfg;
 
 	populateMonitorConfig(cfg.windowCfg);
-	populateGameConfig(cfg.imageContainerCfg);
+	populateGameConfig(cfg.imageContainerCfg);	//have to change it
 
 	return cfg;
 }
