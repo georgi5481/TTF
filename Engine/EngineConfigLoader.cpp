@@ -34,11 +34,12 @@ static void populateMonitorConfig(MonitorWindowCfg& cfg){
 }
 
 
-
+/*
 static void populateGameConfig(GameCfg& cfg){
 
 
 }
+*/
 
 
 static void populateImageContainerConfig(ImageContainerCfg& cfg){
@@ -64,7 +65,7 @@ EngineConfig EngineConfigLoader::loadConfig(){
 	EngineConfig cfg;
 
 	populateMonitorConfig(cfg.windowCfg);
-	populateGameConfig(cfg.imageContainerCfg);	//have to change it
+	populateImageContainerConfig(cfg.imageContainerCfg);	//have to change it
 
 	return cfg;
 }

@@ -39,7 +39,6 @@ add_executable(
 	${_BASE_DIR}/utils/Time/Time.cpp
 
 	${_BASE_DIR}/Engine/config/EngineConfig.h
-	${_BASE_DIR}/Engine/config/ImageContainerCfg.h
 	${_BASE_DIR}/Engine/Engine.h
 	${_BASE_DIR}/Engine/Engine.cpp
 	${_BASE_DIR}/Engine/EngineConfigLoader.h
@@ -49,6 +48,7 @@ add_executable(
 	${_BASE_DIR}/Game/Game.cpp
 	${_BASE_DIR}/Game/config/GameCfg.h
 	
+	${_BASE_DIR}/sdl_utils/config/ImageContainerCfg.h
 	${_BASE_DIR}/sdl_utils/SDLLoader.h
 	${_BASE_DIR}/sdl_utils/SDLLoader.cpp 
 	${_BASE_DIR}/sdl_utils/MonitorWindow.cpp

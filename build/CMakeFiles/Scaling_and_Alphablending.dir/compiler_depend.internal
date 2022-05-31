@@ -250,7 +250,7 @@ CMakeFiles/Scaling_and_Alphablending.dir/Engine/EngineConfigLoader.cpp.o
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/Engine/config/EngineConfig.h
- /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/MonitorWindow.h
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/config/MonitorWindowCfg.h
  /usr/include/c++/11/string
  /usr/include/c++/11/bits/stringfwd.h
  /usr/include/c++/11/bits/memoryfwd.h
@@ -378,11 +378,8 @@ CMakeFiles/Scaling_and_Alphablending.dir/Engine/EngineConfigLoader.cpp.o
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h
  /usr/include/c++/11/bits/charconv.h
  /usr/include/c++/11/bits/basic_string.tcc
- /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/Rectangle.h
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/Point.h
- /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/Point.h
- /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/config/MonitorWindowCfg.h
- /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/Game/config/GameCfg.h
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/config/ImageContainerCfg.h
  /usr/include/c++/11/unordered_map
  /usr/include/c++/11/ext/aligned_buffer.h
  /usr/include/c++/11/bits/hashtable.h
@@ -397,6 +394,10 @@ CMakeFiles/Scaling_and_Alphablending.dir/Engine/EngineConfigLoader.cpp.o
  /usr/include/c++/11/bits/node_handle.h
  /usr/include/c++/11/bits/unordered_map.h
  /usr/include/c++/11/bits/erase_if.h
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/Rectangle.h
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/Point.h
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/Game/config/GameCfg.h
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/common/commonDefines.h
 
 CMakeFiles/Scaling_and_Alphablending.dir/Game/Game.cpp.o
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/Game/Game.cpp
@@ -602,7 +603,6 @@ CMakeFiles/Scaling_and_Alphablending.dir/Game/Game.cpp.o
  /usr/include/c++/11/bits/istream.tcc
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/config/MonitorWindowCfg.h
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/Point.h
- /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/Texture.h
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/InputEvent.h
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/input/EventDefines.h
 

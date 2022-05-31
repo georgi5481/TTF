@@ -154,6 +154,8 @@ CMakeFiles/Scaling_and_Alphablending.dir/Engine/Engine.cpp.o: \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/DrawParams.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/InputEvent.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/input/EventDefines.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/containers/ImageContainer.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/config/ImageContainerCfg.h \
  /usr/include/c++/11/iostream /usr/include/c++/11/ostream \
  /usr/include/c++/11/ios /usr/include/c++/11/exception \
  /usr/include/c++/11/bits/exception_ptr.h \
@@ -181,5 +183,4 @@ CMakeFiles/Scaling_and_Alphablending.dir/Engine/Engine.cpp.o: \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/Time/Time.h \
  /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
  /usr/include/c++/11/limits /usr/include/c++/11/ctime \
- /usr/include/c++/11/bits/parse_numbers.h \
- /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/Engine/EngineConfigLoader.h
+ /usr/include/c++/11/bits/parse_numbers.h

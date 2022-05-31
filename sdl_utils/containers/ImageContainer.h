@@ -10,7 +10,7 @@
 
 //Own includes
 #include "utils/drawings/Rectangle.h"
-#include "utils/config/ImageContainerCfg.h"
+#include "sdl_utils/config/ImageContainerCfg.h"
 
 //Forward Declaration
 

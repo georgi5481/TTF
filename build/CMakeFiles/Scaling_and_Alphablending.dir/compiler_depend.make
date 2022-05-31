@@ -248,7 +248,7 @@ CMakeFiles/Scaling_and_Alphablending.dir/Engine/EngineConfigLoader.cpp.o: ../Eng
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
   ../Engine/config/EngineConfig.h \
-  ../sdl_utils/MonitorWindow.h \
+  ../sdl_utils/config/MonitorWindowCfg.h \
   /usr/include/c++/11/string \
   /usr/include/c++/11/bits/stringfwd.h \
   /usr/include/c++/11/bits/memoryfwd.h \
@@ -376,11 +376,8 @@ CMakeFiles/Scaling_and_Alphablending.dir/Engine/EngineConfigLoader.cpp.o: ../Eng
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/include/c++/11/bits/charconv.h \
   /usr/include/c++/11/bits/basic_string.tcc \
-  ../utils/drawings/Rectangle.h \
   ../utils/drawings/Point.h \
-  ../utils/drawings/Point.h \
-  ../sdl_utils/config/MonitorWindowCfg.h \
-  ../Game/config/GameCfg.h \
+  ../sdl_utils/config/ImageContainerCfg.h \
   /usr/include/c++/11/unordered_map \
   /usr/include/c++/11/ext/aligned_buffer.h \
   /usr/include/c++/11/bits/hashtable.h \
@@ -394,7 +391,11 @@ CMakeFiles/Scaling_and_Alphablending.dir/Engine/EngineConfigLoader.cpp.o: ../Eng
   /usr/include/c++/11/bits/enable_special_members.h \
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
-  /usr/include/c++/11/bits/erase_if.h
+  /usr/include/c++/11/bits/erase_if.h \
+  ../utils/drawings/Rectangle.h \
+  ../utils/drawings/Point.h \
+  ../Game/config/GameCfg.h \
+  ../common/commonDefines.h
 
 CMakeFiles/Scaling_and_Alphablending.dir/Game/Game.cpp.o: ../Game/Game.cpp \
   /usr/include/stdc-predef.h \
@@ -599,7 +600,6 @@ CMakeFiles/Scaling_and_Alphablending.dir/Game/Game.cpp.o: ../Game/Game.cpp \
   /usr/include/c++/11/bits/istream.tcc \
   ../sdl_utils/config/MonitorWindowCfg.h \
   ../utils/drawings/Point.h \
-  ../sdl_utils/Texture.h \
   ../sdl_utils/InputEvent.h \
   ../utils/input/EventDefines.h
 
@@ -2929,6 +2929,8 @@ CMakeFiles/Scaling_and_Alphablending.dir/utils/thread/ThreadUtils.cpp.o: ../util
 
 /usr/include/c++/11/tr1/modified_bessel_func.tcc:
 
+/usr/include/c++/11/tr1/hypergeometric.tcc:
+
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
@@ -2991,8 +2993,6 @@ CMakeFiles/Scaling_and_Alphablending.dir/utils/thread/ThreadUtils.cpp.o: ../util
 
 /usr/include/c++/11/bits/localefwd.h:
 
-/usr/include/c++/11/tr1/hypergeometric.tcc:
-
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
@@ -3030,6 +3030,8 @@ CMakeFiles/Scaling_and_Alphablending.dir/utils/thread/ThreadUtils.cpp.o: ../util
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
 
 /usr/include/c++/11/bits/stl_algobase.h:
+
+../common/commonDefines.h:
 
 /usr/include/c++/11/bits/stl_pair.h:
 
@@ -3257,6 +3259,10 @@ CMakeFiles/Scaling_and_Alphablending.dir/utils/thread/ThreadUtils.cpp.o: ../util
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
+../sdl_utils/Texture.h:
+
+../Engine/Engine.h:
+
 /usr/include/c++/11/bits/specfun.h:
 
 /usr/include/c++/11/bits/std_thread.h:
@@ -3483,9 +3489,7 @@ CMakeFiles/Scaling_and_Alphablending.dir/utils/thread/ThreadUtils.cpp.o: ../util
 
 /usr/include/c++/11/bits/parse_numbers.h:
 
-../Engine/Engine.h:
-
-../sdl_utils/Texture.h:
+../sdl_utils/config/ImageContainerCfg.h:
 
 ../main.cpp:
 

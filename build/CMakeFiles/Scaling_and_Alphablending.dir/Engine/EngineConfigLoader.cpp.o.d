@@ -23,7 +23,7 @@ CMakeFiles/Scaling_and_Alphablending.dir/Engine/EngineConfigLoader.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/Engine/config/EngineConfig.h \
- /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/MonitorWindow.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/config/MonitorWindowCfg.h \
  /usr/include/c++/11/string /usr/include/c++/11/bits/stringfwd.h \
  /usr/include/c++/11/bits/memoryfwd.h \
  /usr/include/c++/11/bits/char_traits.h \
@@ -130,11 +130,8 @@ CMakeFiles/Scaling_and_Alphablending.dir/Engine/EngineConfigLoader.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/Rectangle.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/Point.h \
- /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/Point.h \
- /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/config/MonitorWindowCfg.h \
- /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/Game/config/GameCfg.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/config/ImageContainerCfg.h \
  /usr/include/c++/11/unordered_map \
  /usr/include/c++/11/ext/aligned_buffer.h \
  /usr/include/c++/11/bits/hashtable.h \
@@ -145,4 +142,8 @@ CMakeFiles/Scaling_and_Alphablending.dir/Engine/EngineConfigLoader.cpp.o: \
  /usr/include/c++/11/bits/enable_special_members.h \
  /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/unordered_map.h \
- /usr/include/c++/11/bits/erase_if.h
+ /usr/include/c++/11/bits/erase_if.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/Rectangle.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/Point.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/Game/config/GameCfg.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/common/commonDefines.h

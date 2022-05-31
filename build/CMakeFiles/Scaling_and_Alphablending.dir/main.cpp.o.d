@@ -174,5 +174,7 @@ CMakeFiles/Scaling_and_Alphablending.dir/main.cpp.o: \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/DrawParams.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/InputEvent.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/input/EventDefines.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/containers/ImageContainer.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/config/ImageContainerCfg.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/Engine/EngineConfigLoader.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/Engine/config/EngineConfig.h
