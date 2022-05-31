@@ -34,12 +34,12 @@ static void populateMonitorConfig(MonitorWindowCfg& cfg){
 }
 
 
-/*
+
 static void populateGameConfig(GameCfg& cfg){
 
 
 }
-*/
+
 
 static void populateImageContainerConfig(ImageContainerCfg& cfg){
 
