@@ -37,7 +37,7 @@ int32_t Texture::createTextureFromFile(const std::string& filePath,SDL_Texture*&
 		}
 
 	if(EXIT_SUCCESS != createTextureFromSurface(surface, outTexture)){
-		std::cerr << "createTextureFromSurface() failed for filepath: " << filePath << std::endl;
+		std::cerr << "createTextureFromSurface() failed for filepath : " << filePath << std::endl;
 		return EXIT_FAILURE;
 	}
 
