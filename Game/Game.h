@@ -12,6 +12,7 @@
 
 //Own includes
 #include "Game/config/GameCfg.h"
+#include "utils/drawings/DrawParams.h"
 
 //Forward Declaration
 struct InputEvent;
