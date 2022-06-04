@@ -14,7 +14,6 @@
 #include "Game/config/GameCfg.h"
 
 //Forward Declaration
-struct SDL_Texture;
 struct InputEvent;
 
 
