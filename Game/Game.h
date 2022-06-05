@@ -24,14 +24,13 @@ public:
 
 	int32_t init(const GameCfg& cfg);
 	void deinit();
-	void draw(std::vector<SDL_Texture*>& outImages);
+	void draw(std::vector<DrawParams>& outImages);
 	void handleEvent(const InputEvent& e);
 
 private:
 
-	//game specific logic
-	SDL_Texture* _currChosenImage = nullptr;	//the image we are presenting atm
-	SDL_Texture* _imageSurfaces[COUNT]{};		//an array of our Surfaces loaded basically in the heap
+	DrawParams pressKeysImg;
+	DrawParams layer2Img;
 
 
 

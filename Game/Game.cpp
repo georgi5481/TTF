@@ -12,30 +12,22 @@
 #include "sdl_utils/InputEvent.h"
 
 
-int32_t Game::init(const GameCfg& cfg){
-
-
-	_currChosenImage = _imageSurfaces[PRESS_KEYS];
-
+int32_t Game::init([[maybe_unused]]const GameCfg& cfg){
 
 	return EXIT_SUCCESS;
 }
 
 void Game::deinit(){
-	for(int32_t i = 0; i < COUNT; ++i){
-		Texture::freeTexture(_imageSurfaces[i]);	//have to free the surface otherwise we have a memory leak
-	}
+
 }
 
-void Game::draw(std::vector<SDL_Texture*>& outImages){
-	for(int i = 0; i <20; i++){			//remove this later on
-		outImages.push_back(_currChosenImage);
-
-	}
+void Game::draw(std::vector<DrawParams>& outImages){
+	outImages.push_back(pressKeysImg);
+	outImages.push_back(layer2Img);
 }
 
-void Game::handleEvent(const InputEvent& e){
-	if(TouchEvent::KEYBOARD_RELEASE == e.type){	//sets to zero if we stoped pressing the key
+void Game::handleEvent([[maybe_unused]]const InputEvent& e){
+	/*if(TouchEvent::KEYBOARD_RELEASE == e.type){	//sets to zero if we stoped pressing the key
 		_currChosenImage = _imageSurfaces[PRESS_KEYS];
 	}
 
@@ -62,7 +54,7 @@ void Game::handleEvent(const InputEvent& e){
 
 		default:
 			break;
-		}
+		}*/
 }
 
 

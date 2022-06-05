@@ -145,13 +145,13 @@ CMakeFiles/Scaling_and_Alphablending.dir/Engine/Engine.cpp.o: \
  /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/unordered_map.h \
  /usr/include/c++/11/bits/erase_if.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/DrawParams.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/Point.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/MonitorWindow.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/Rectangle.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/Point.h \
- /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/Point.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/config/MonitorWindowCfg.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/Renderer.h \
- /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/DrawParams.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/InputEvent.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/input/EventDefines.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/containers/ImageContainer.h \

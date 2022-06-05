@@ -174,15 +174,17 @@ CMakeFiles/Scaling_and_Alphablending.dir/Engine/Engine.cpp.o: ../Engine/Engine.c
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
+  ../utils/drawings/DrawParams.h \
+  ../utils/drawings/Point.h \
   ../sdl_utils/MonitorWindow.h \
   ../utils/drawings/Rectangle.h \
   ../utils/drawings/Point.h \
-  ../utils/drawings/Point.h \
   ../sdl_utils/config/MonitorWindowCfg.h \
   ../sdl_utils/Renderer.h \
-  ../utils/drawings/DrawParams.h \
   ../sdl_utils/InputEvent.h \
   ../utils/input/EventDefines.h \
+  ../sdl_utils/containers/ImageContainer.h \
+  ../sdl_utils/config/ImageContainerCfg.h \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/ostream \
   /usr/include/c++/11/ios \
@@ -219,8 +221,7 @@ CMakeFiles/Scaling_and_Alphablending.dir/Engine/Engine.cpp.o: ../Engine/Engine.c
   /usr/include/c++/11/ratio \
   /usr/include/c++/11/limits \
   /usr/include/c++/11/ctime \
-  /usr/include/c++/11/bits/parse_numbers.h \
-  ../Engine/EngineConfigLoader.h
+  /usr/include/c++/11/bits/parse_numbers.h
 
 CMakeFiles/Scaling_and_Alphablending.dir/Engine/EngineConfigLoader.cpp.o: ../Engine/EngineConfigLoader.cpp \
   /usr/include/stdc-predef.h \
@@ -569,6 +570,8 @@ CMakeFiles/Scaling_and_Alphablending.dir/Game/Game.cpp.o: ../Game/Game.cpp \
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
+  ../utils/drawings/DrawParams.h \
+  ../utils/drawings/Point.h \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/ostream \
   /usr/include/c++/11/ios \
@@ -599,7 +602,6 @@ CMakeFiles/Scaling_and_Alphablending.dir/Game/Game.cpp.o: ../Game/Game.cpp \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
   ../sdl_utils/config/MonitorWindowCfg.h \
-  ../utils/drawings/Point.h \
   ../sdl_utils/InputEvent.h \
   ../utils/input/EventDefines.h
 
@@ -811,11 +813,13 @@ CMakeFiles/Scaling_and_Alphablending.dir/main.cpp.o: ../main.cpp \
   /usr/include/c++/11/bits/node_handle.h \
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/erase_if.h \
+  ../utils/drawings/DrawParams.h \
   ../sdl_utils/MonitorWindow.h \
   ../sdl_utils/Renderer.h \
-  ../utils/drawings/DrawParams.h \
   ../sdl_utils/InputEvent.h \
   ../utils/input/EventDefines.h \
+  ../sdl_utils/containers/ImageContainer.h \
+  ../sdl_utils/config/ImageContainerCfg.h \
   ../Engine/EngineConfigLoader.h \
   ../Engine/config/EngineConfig.h
 
@@ -2300,11 +2304,10 @@ CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp
   /usr/include/c++/11/bits/erase_if.h \
   ../utils/drawings/Rectangle.h \
   ../utils/drawings/Point.h \
-  /usr/include/c++/11/iostream \
-  /usr/include/c++/11/ostream \
-  /usr/include/c++/11/ios \
-  /usr/include/c++/11/iosfwd \
+  ../sdl_utils/config/ImageContainerCfg.h \
+  /usr/include/c++/11/string \
   /usr/include/c++/11/bits/stringfwd.h \
+  /usr/include/c++/11/bits/char_traits.h \
   /usr/include/c++/11/bits/postypes.h \
   /usr/include/c++/11/cwchar \
   /usr/include/wchar.h \
@@ -2319,22 +2322,19 @@ CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/c++/11/exception \
-  /usr/include/c++/11/bits/exception_ptr.h \
-  /usr/include/c++/11/bits/cxxabi_init_exception.h \
-  /usr/include/c++/11/typeinfo \
-  /usr/include/c++/11/bits/nested_exception.h \
-  /usr/include/c++/11/bits/char_traits.h \
   /usr/include/c++/11/bits/localefwd.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++locale.h \
   /usr/include/c++/11/clocale \
   /usr/include/locale.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
+  /usr/include/c++/11/iosfwd \
   /usr/include/c++/11/cctype \
   /usr/include/ctype.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/c++/11/bits/ios_base.h \
+  /usr/include/c++/11/bits/ostream_insert.h \
+  /usr/include/c++/11/bits/cxxabi_forced.h \
+  /usr/include/c++/11/bits/basic_string.h \
   /usr/include/c++/11/ext/atomicity.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h \
@@ -2366,11 +2366,6 @@ CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
-  /usr/include/c++/11/bits/locale_classes.h \
-  /usr/include/c++/11/string \
-  /usr/include/c++/11/bits/ostream_insert.h \
-  /usr/include/c++/11/bits/cxxabi_forced.h \
-  /usr/include/c++/11/bits/basic_string.h \
   /usr/include/c++/11/string_view \
   /usr/include/c++/11/bits/string_view.tcc \
   /usr/include/c++/11/ext/string_conversions.h \
@@ -2405,6 +2400,16 @@ CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/include/c++/11/bits/charconv.h \
   /usr/include/c++/11/bits/basic_string.tcc \
+  /usr/include/c++/11/iostream \
+  /usr/include/c++/11/ostream \
+  /usr/include/c++/11/ios \
+  /usr/include/c++/11/exception \
+  /usr/include/c++/11/bits/exception_ptr.h \
+  /usr/include/c++/11/bits/cxxabi_init_exception.h \
+  /usr/include/c++/11/typeinfo \
+  /usr/include/c++/11/bits/nested_exception.h \
+  /usr/include/c++/11/bits/ios_base.h \
+  /usr/include/c++/11/bits/locale_classes.h \
   /usr/include/c++/11/bits/locale_classes.tcc \
   /usr/include/c++/11/system_error \
   /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h \
@@ -2423,7 +2428,8 @@ CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp
   /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
-  /usr/include/c++/11/bits/istream.tcc
+  /usr/include/c++/11/bits/istream.tcc \
+  ../sdl_utils/Texture.h
 
 CMakeFiles/Scaling_and_Alphablending.dir/utils/Time/Time.cpp.o: ../utils/Time/Time.cpp \
   /usr/include/stdc-predef.h \
@@ -2741,8 +2747,6 @@ CMakeFiles/Scaling_and_Alphablending.dir/utils/thread/ThreadUtils.cpp.o: ../util
 
 ../utils/Time/Time.cpp:
 
-../sdl_utils/containers/ImageContainer.h:
-
 ../sdl_utils/Texture.cpp:
 
 /usr/include/SDL2/SDL_image.h:
@@ -2930,6 +2934,8 @@ CMakeFiles/Scaling_and_Alphablending.dir/utils/thread/ThreadUtils.cpp.o: ../util
 /usr/include/c++/11/tr1/modified_bessel_func.tcc:
 
 /usr/include/c++/11/tr1/hypergeometric.tcc:
+
+/usr/include/c++/11/tr1/exp_integral.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
 
@@ -3135,6 +3141,8 @@ CMakeFiles/Scaling_and_Alphablending.dir/utils/thread/ThreadUtils.cpp.o: ../util
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
+../sdl_utils/containers/ImageContainer.h:
+
 ../Engine/Engine.cpp:
 
 /usr/include/SDL2/SDL_gesture.h:
@@ -3178,8 +3186,6 @@ CMakeFiles/Scaling_and_Alphablending.dir/utils/thread/ThreadUtils.cpp.o: ../util
 ../utils/drawings/DrawParams.h:
 
 /usr/include/c++/11/bits/stl_construct.h:
-
-/usr/include/c++/11/tr1/exp_integral.tcc:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/tmmintrin.h:
 
@@ -3391,10 +3397,6 @@ CMakeFiles/Scaling_and_Alphablending.dir/utils/thread/ThreadUtils.cpp.o: ../util
 
 /usr/include/c++/11/bits/erase_if.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/11/include/avx512vpopcntdqintrin.h:
-
-../sdl_utils/MonitorWindow.h:
-
 /usr/include/linux/errno.h:
 
 ../utils/drawings/Point.h:
@@ -3402,6 +3404,10 @@ CMakeFiles/Scaling_and_Alphablending.dir/utils/thread/ThreadUtils.cpp.o: ../util
 /usr/include/c++/11/bits/exception.h:
 
 /usr/include/c++/11/bits/locale_facets.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/avx512vpopcntdqintrin.h:
+
+../sdl_utils/MonitorWindow.h:
 
 ../sdl_utils/Renderer.h:
 
@@ -3416,6 +3422,8 @@ CMakeFiles/Scaling_and_Alphablending.dir/utils/thread/ThreadUtils.cpp.o: ../util
 ../Engine/EngineConfigLoader.h:
 
 ../sdl_utils/InputEvent.h:
+
+../sdl_utils/config/ImageContainerCfg.h:
 
 /usr/include/c++/11/ostream:
 
@@ -3488,8 +3496,6 @@ CMakeFiles/Scaling_and_Alphablending.dir/utils/thread/ThreadUtils.cpp.o: ../util
 /usr/lib/gcc/x86_64-linux-gnu/11/include/clflushoptintrin.h:
 
 /usr/include/c++/11/bits/parse_numbers.h:
-
-../sdl_utils/config/ImageContainerCfg.h:
 
 ../main.cpp:
 

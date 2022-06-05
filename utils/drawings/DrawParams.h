@@ -14,7 +14,7 @@
 //Forward Declaration
 
 
-/*basically the next variable(ID) shouldnt be declared in the .h file, BUT
+/*basically the next variable shouldnt be declared in the .h file, BUT
  *in c++ 17 the 'inline' declaration means - no matter how many times we include the .h file
  *we will always have only one instanse of the variable*/
 inline constexpr auto INVALID_RSRC_ID = -1;

@@ -52,7 +52,6 @@ static void populateImageContainerConfig(ImageContainerCfg& cfg){
 	cfg.imageConfigs.insert(std::make_pair(TextureId::PRESS_KEYS,imageCfg));	//we have to pair them first with the ID
 
 
-	ImageCfg imageCfg;
 	imageCfg.location = "../resources/layer_2.png";
 	imageCfg.height = LAYER_2_IMG_WIDTH;
 	imageCfg.width = LAER_2_IMG_HEIGHT;

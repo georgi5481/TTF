@@ -38,7 +38,6 @@ int32_t Engine::init(const EngineConfig& cfg){
 			return EXIT_FAILURE;
 	}
 
-	const GameCfg gameCfg= {.dummy = 1337};
 
 	if (EXIT_SUCCESS != _game.init(gameCfg)){	//load the resources in the window
 			std::cerr << "_game.init() failed." << std::endl;
@@ -85,7 +84,7 @@ void Engine::drawFrame(){
 
 	_renderer.clearScreen();	//always start with clearing the screen
 
-	std::vector<SDL_Texture*> images;
+	std::vector<DrawParams> images;
 
 	_game.draw(images);
 

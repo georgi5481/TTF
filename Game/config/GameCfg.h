@@ -12,12 +12,9 @@
 
 //Forward Declaration
 
-enum Images{
-	PRESS_KEYS, LAYER_2, COUNT
-};
-
 struct GameCfg {
-	int32_t dummy;
+	int32_t pressKeysRsrcId;
+	int32_t layer2RsrcId;
 };
 
 
