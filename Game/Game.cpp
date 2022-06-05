@@ -12,7 +12,9 @@
 #include "sdl_utils/InputEvent.h"
 
 
-int32_t Game::init([[maybe_unused]]const GameCfg& cfg){
+int32_t Game::init([[maybe_unused]]const GameCfg& cfg,const ImageContainer* imageContainerInterface){
+layer2Img.rsrcId = cfg.layer2RsrcId;
+pressKeysImg.rsrcId =cfg.pressKeysRsrcId;
 
 	return EXIT_SUCCESS;
 }
