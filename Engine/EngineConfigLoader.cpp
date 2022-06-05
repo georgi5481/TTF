@@ -34,12 +34,12 @@ static void populateMonitorConfig(MonitorWindowCfg& cfg){
 }
 
 
-/*
+
 static void populateGameConfig(GameCfg& cfg){
-
-
+	cfg.layer2RsrcId = TextureId::LAYER_2;
+	cfg.pressKeysRsrcId = TextureId::PRESS_KEYS;
 }
-*/
+
 
 
 static void populateImageContainerConfig(ImageContainerCfg& cfg){
@@ -65,6 +65,7 @@ EngineConfig EngineConfigLoader::loadConfig(){
 
 	populateMonitorConfig(cfg.windowCfg);
 	populateImageContainerConfig(cfg.imageContainerCfg);	//have to change it
+	populateGameConfig(cfg.gameCfg);
 
 	return cfg;
 }
