@@ -31,6 +31,8 @@ public:
 	 static void freeTexture(SDL_Texture*& outTexture);
 
 	 static void setRenderer(SDL_Renderer* renderer);
+
+	 int32_t setBlendModeTexture(SDL_Texture *texture, BlendMode blendMode);
 };
 
 #endif /* SDL_UTILS_TEXTURE_H_ */
