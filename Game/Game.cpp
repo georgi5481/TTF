@@ -50,34 +50,45 @@ void Game::draw(std::vector<DrawParams>& outImages){
 }
 
 void Game::handleEvent([[maybe_unused]]const InputEvent& e){
-	/*if(TouchEvent::KEYBOARD_RELEASE == e.type){	//sets to zero if we stoped pressing the key
-		_currChosenImage = _imageSurfaces[PRESS_KEYS];
-	}
-
-	if(TouchEvent::KEYBOARD_PRESS != e.type){	//check if our event is a keyboard event in the first place
+	if(TouchEvent::KEYBOARD_RELEASE != e.type){	//will basically detect only when you realease a key.
 		return;
 	}
 
 		switch(e.key){
 		case Keyboard::KEY_UP:
-		_currChosenImage = _imageSurfaces[UP];
+		pressKeysImg.pos.y -= 10;
 		break;
 
 		case Keyboard::KEY_DOWN:
-		_currChosenImage = _imageSurfaces[DOWN];
+		pressKeysImg.pos.y += 10;
 		break;
 
 		case Keyboard::KEY_LEFT:
-		_currChosenImage = _imageSurfaces[LEFT];
+		pressKeysImg.pos.x -= 10;
 		break;
 
 		case Keyboard::KEY_RIGHT:
-		_currChosenImage = _imageSurfaces[RIGHT];
+		pressKeysImg.pos.x += 10;
+		break;
+
+
+
+		case Keyboard::KEY_A:
+		pressKeysImg.width -= 10;
+		break;
+		case Keyboard::KEY_D:
+		pressKeysImg.width += 10;
+		break;
+		case Keyboard::KEY_S:
+		pressKeysImg.height -= 10;
+		break;
+		case Keyboard::KEY_W:
+		pressKeysImg.height += 10;
 		break;
 
 		default:
 			break;
-		}*/
+		}
 }
 
 
