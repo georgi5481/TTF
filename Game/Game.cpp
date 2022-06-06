@@ -15,7 +15,7 @@
 int32_t Game::init([[maybe_unused]]const GameCfg& cfg,
 			const ImageContainer* imageContainerInterface){
 
-	if(nullptr == imgContainerInterface)
+	if(nullptr == imageContainerInterface)
 			{
 		std::cerr << "Error, nullptr provided for imgContainerInterface" << std::endl;
 			return EXIT_FAILURE;
@@ -28,13 +28,14 @@ int32_t Game::init([[maybe_unused]]const GameCfg& cfg,
 	Rectangle rect = _imgContainer->getImageFrame(layer2Img.rsrcId);
 	layer2Img.width = rect.h;
 	layer2Img.height = rect.h;
-
+	layer2Img.pos = Point::ZERO;
 
 	pressKeysImg.rsrcId =cfg.pressKeysRsrcId;
 	rect = _imgContainer->getImageFrame(pressKeysImg.rsrcId);
 	pressKeysImg.width = rect.w;
 	pressKeysImg.height = rect.h;
-
+	pressKeysImg.pos = Point::ZERO;
+	pressKeysImg.pos.y += 20;
 
 	return EXIT_SUCCESS;
 }

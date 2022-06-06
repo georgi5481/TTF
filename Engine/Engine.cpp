@@ -61,7 +61,6 @@ void Engine::deinit(){	//always deinitialise backwards according to initialising
 
 void Engine::start(){
 	mainLoop();
-
 }
 
 void Engine::mainLoop(){
@@ -88,11 +87,13 @@ void Engine::drawFrame(){
 
 	_game.draw(images);
 
-/*
-	for(auto& image : images){
-	_renderer.renderTexture(image);
+SDL_Texture* texture = nullptr;
+
+	for(const DrawParams& image : images){	//the function bellow accepts only const DrawParams !!!
+		texture = _imgContainer.getImageTexture(image.rsrcId);
+		_renderer.renderTexture(texture,image);
 	}
-*/
+
 
 		_renderer.finishFrame();	//update the image
 }

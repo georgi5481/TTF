@@ -18,11 +18,11 @@ constexpr auto WINDOW_HEIGHT = 480;
 constexpr auto WINDOW_NAME = "Hardware_Redering";
 
 
-constexpr auto PRESS_KEYS_WIDTH = 640;
+constexpr auto PRESS_KEYS_WIDTH = 640;			//here you can scale manually the pictures
 constexpr auto PRESS_KEYS_HEIGHT = 480;
 
-constexpr auto LAYER_2_IMG_WIDTH = 640;
-constexpr auto LAER_2_IMG_HEIGHT = 480;
+constexpr auto LAYER_2_IMG_WIDTH = 160;
+constexpr auto LAER_2_IMG_HEIGHT = 120;
 
 }
 
@@ -48,6 +48,7 @@ static void populateImageContainerConfig(ImageContainerCfg& cfg){
 	imageCfg.location = "../resources/press_keys.png";
 	imageCfg.height = PRESS_KEYS_WIDTH;
 	imageCfg.width = PRESS_KEYS_HEIGHT;
+
 
 	cfg.imageConfigs.insert(std::make_pair(TextureId::PRESS_KEYS,imageCfg));	//we have to pair them first with the ID
 

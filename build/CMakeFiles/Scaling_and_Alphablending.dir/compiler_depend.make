@@ -603,7 +603,11 @@ CMakeFiles/Scaling_and_Alphablending.dir/Game/Game.cpp.o: ../Game/Game.cpp \
   /usr/include/c++/11/bits/istream.tcc \
   ../sdl_utils/config/MonitorWindowCfg.h \
   ../sdl_utils/InputEvent.h \
-  ../utils/input/EventDefines.h
+  ../utils/input/EventDefines.h \
+  ../sdl_utils/containers/ImageContainer.h \
+  ../utils/drawings/Rectangle.h \
+  ../utils/drawings/Point.h \
+  ../sdl_utils/config/ImageContainerCfg.h
 
 CMakeFiles/Scaling_and_Alphablending.dir/main.cpp.o: ../main.cpp \
   /usr/include/stdc-predef.h \

@@ -170,4 +170,8 @@ CMakeFiles/Scaling_and_Alphablending.dir/Game/Game.cpp.o: \
  /usr/include/c++/11/bits/istream.tcc \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/config/MonitorWindowCfg.h \
  /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/InputEvent.h \
- /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/input/EventDefines.h
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/input/EventDefines.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/containers/ImageContainer.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/Rectangle.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/utils/drawings/Point.h \
+ /home/georgi5481/eclipse-workspace/Scaling_and_Alphablending/sdl_utils/config/ImageContainerCfg.h
