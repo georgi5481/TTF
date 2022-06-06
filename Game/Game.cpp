@@ -10,11 +10,31 @@
 
 //Own components includes
 #include "sdl_utils/InputEvent.h"
+#include "sdl_utils/containers/ImageContainer.h"
+
+int32_t Game::init([[maybe_unused]]const GameCfg& cfg,
+			const ImageContainer* imageContainerInterface){
+
+	if(nullptr == imgContainerInterface)
+			{
+		std::cerr << "Error, nullptr provided for imgContainerInterface" << std::endl;
+			return EXIT_FAILURE;
+			}
+
+	_imgContainer = imageContainerInterface;
 
 
-int32_t Game::init([[maybe_unused]]const GameCfg& cfg,const ImageContainer* imageContainerInterface){
-layer2Img.rsrcId = cfg.layer2RsrcId;
-pressKeysImg.rsrcId =cfg.pressKeysRsrcId;
+	layer2Img.rsrcId = cfg.layer2RsrcId;
+	Rectangle rect = _imgContainer->getImageFrame(layer2Img.rsrcId);
+	layer2Img.width = rect.h;
+	layer2Img.height = rect.h;
+
+
+	pressKeysImg.rsrcId =cfg.pressKeysRsrcId;
+	rect = _imgContainer->getImageFrame(pressKeysImg.rsrcId);
+	pressKeysImg.width = rect.w;
+	pressKeysImg.height = rect.h;
+
 
 	return EXIT_SUCCESS;
 }
