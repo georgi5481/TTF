@@ -1,5 +1,5 @@
 #ifndef GAME_GAME_H_
-#define GAME_GAME_H_
+#define GAME_GAME_H_		//the game class should be the one that holds the game specific logic
 
 //C system includes
 

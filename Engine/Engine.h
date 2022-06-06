@@ -1,5 +1,5 @@
 #ifndef ENGINE_ENGINE_H_
-#define ENGINE_ENGINE_H_
+#define ENGINE_ENGINE_H_	//the engine class should hold the classes on a bigger scale
 
 //C system includes
 
