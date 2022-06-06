@@ -18,15 +18,28 @@
  *in c++ 17 the 'inline' declaration means - no matter how many times we include the .h file
  *we will always have only one instanse of the variable*/
 inline constexpr auto INVALID_RSRC_ID = -1;
+inline constexpr auto FULL_OPACITY = 255;
+inline constexpr auto ZERO_OPACITY = 0;
+
+
+enum class BlendMode: uint8_t {	//instead of using normal int, this way we can force the enum to be from uint8_t
+	NONE = 0,	//Values for SDL_BLENDMODE_NONE
+	BLEND = 1,	//SDL_BLENDMODE_BLEND
+	ADD = 2,	//SDL_BLENDMODE_ADD
+	MOD = 4		//SDL_BLENDMODE_MODE
+};
+
 
 
 struct DrawParams {
-	// Top left position of texture
+	//Where to place the texture position on the screen.
 	Point pos = Point::UNDEFINED;
 
 	//Draw dimensions of the texture
 	int32_t width = 0;
 	int32_t height = 0;
+
+	int32_t opacity = FULL_OPACITY;
 
 	//unique resourceId
 	int32_t rsrcId = INVALID_RSRC_ID;
