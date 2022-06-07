@@ -89,7 +89,7 @@ void Engine::drawFrame(){
 
 SDL_Texture* texture = nullptr;
 
-	for(const DrawParams& image : images){	//the function bellow accepts only const DrawParams !!!
+	for(const DrawParams& image : images){	//the function bellow accepts only const DrawParams !!! This is why we declare here a const object pointer
 		texture = _imgContainer.getImageTexture(image.rsrcId);
 		_renderer.renderTexture(texture,image);
 	}

@@ -48,7 +48,7 @@ SDL_Texture* ImageContainer::getImageTexture(int32_t rsrcId) const{
 }
 
 
-Rectangle ImageContainer::getImageFrame(int32_t rsrcId) const{
+Rectangle ImageContainer::getImageFrame(int32_t rsrcId) const{	//will return the rectangle area
 	//we need to find if there is an element in the map with this key first. Otherwise it will make a new element with this key if not found.
 	auto it = _textureFrames.find(rsrcId);
 		if(it == _textureFrames.end()){
