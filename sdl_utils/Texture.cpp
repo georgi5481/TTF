@@ -79,3 +79,33 @@ void Texture::setRenderer(SDL_Renderer* renderer){
 }
 
 
+
+int32_t setBlendModeTexture(SDL_Texture *texture, BlendMode blendMode){
+
+	//takes two arguments 1 to the texture we are gonna blend, 2nd to the blendmode
+if(EXIT_SUCCESS != SDL_SetTextureBlendMode(texture, static_cast<SDL_BlendMode>(blendMode))){
+	std::cerr << "SDL_SetTextureAlphaMod() failer. Reason : " << SDL_GetError() << std::endl;
+	return EXIT_FAILURE;
+}
+return EXIT_SUCCESS;
+}
+
+int32_t setAlphaTexture(SDL_Texture *texture, int32_t alpha){
+
+
+if(EXIT_SUCCESS != SDL_SetTextureAlphaMod(texture, static_cast<uint8_t>(alpha))){
+	if(ZERO_OPACITY > alpha || alpha > FULL_OPACITY){	//can't make changes if the number is negative
+		std::cerr << "Error, invalid alpha value: " << alpha << " provided." << std::endl;
+	}
+
+	std::cerr << "SDL_SetTextureAlphaMod() failer. Reason : " << SDL_GetError() << std::endl;
+	return EXIT_FAILURE;
+}
+
+return EXIT_SUCCESS;
+}
+
+
+
+
+

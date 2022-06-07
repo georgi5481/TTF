@@ -10,6 +10,7 @@
 //3rd-party includes
 
 //Own includes
+#include "utils/drawings/DrawParams.h"
 
 //Forward Declaration
 struct SDL_Surface;
@@ -33,6 +34,8 @@ public:
 	 static void setRenderer(SDL_Renderer* renderer);
 
 	 int32_t setBlendModeTexture(SDL_Texture *texture, BlendMode blendMode);
+
+	 int32_t setAlphaTexture(SDL_Texture *texture, int32_t alpha);
 };
 
 #endif /* SDL_UTILS_TEXTURE_H_ */
