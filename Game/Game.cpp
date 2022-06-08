@@ -1,4 +1,4 @@
-//Corresponding header
+//Corresponding header3
 #include "Game.h"
 //C system includes
 
@@ -37,6 +37,9 @@ int32_t Game::init([[maybe_unused]]const GameCfg& cfg,
 	pressKeysImg.pos = Point::ZERO;
 	pressKeysImg.pos.y += 20;
 
+	pressKeysImg2 = pressKeysImg;
+	pressKeysImg.pos.x += 200;
+
 	return EXIT_SUCCESS;
 }
 
@@ -45,8 +48,11 @@ void Game::deinit(){
 }
 
 void Game::draw(std::vector<DrawParams>& outImages){
+	outImages.push_back(pressKeysImg2);
 	outImages.push_back(pressKeysImg);
-	outImages.push_back(layer2Img);
+	//outImages.push_back(layer2Img);
+
+
 }
 
 void Game::handleEvent([[maybe_unused]]const InputEvent& e){

@@ -28,7 +28,7 @@ public:
 	void handleEvent(const InputEvent& e);
 
 private:
-
+	DrawParams pressKeysImg2;
 	DrawParams pressKeysImg;
 	DrawParams layer2Img;
 
