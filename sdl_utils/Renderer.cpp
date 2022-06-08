@@ -73,15 +73,33 @@ void Renderer::renderTexture(SDL_Texture* texture, const DrawParams& drawParams)
 	const SDL_Rect destRect = {.x = drawParams.pos.x, .y = drawParams.pos.y,
 								.w = drawParams.width, .h = drawParams.height };
 
+	int32_t err = EXIT_SUCCESS;
+	if(FULL_OPACITY == drawParams.opacity) {
+		/*first argument - The renderer which should copy parts of a texture
+		 * second - The source texture
+		 * third - NULL for the entire texture to be displayed
+		 * fourth - NULL for the entire rendering target*/
+		err = SDL_RenderCopy(_sdlRenderer, texture,nullptr, & destRect);
+	}
+	else{
+		if(EXIT_SUCCESS != Texture::setAlphaTexture(texture, drawParams.opacity)){
+			std::cerr << "setAlphaTexture failed for rsrcId : " << drawParams.rsrcId << std::endl;
+		}
+		err = SDL_RenderCopy(_sdlRenderer, texture,nullptr, & destRect);
 
-	/*first argument - The renderer which should copy parts of a texture
+		if(EXIT_SUCCESS != Texture::setAlphaTexture(texture, FULL_OPACITY)){
+				std::cerr << "setAlphaTexture failed for rsrcId : " << drawParams.rsrcId << std::endl;
+			}
+	}
+
+
+	/*renderCopy arguments
 	 * second - The source texture
 	 * third - NULL for the entire texture to be displayed
 	 * fourth - NULL for the entire rendering target*/
-	const int32_t error = SDL_RenderCopy(_sdlRenderer, texture, nullptr, &destRect);
 
-	if(EXIT_SUCCESS != error) {
-		std::cout << "RenderCopy() failed. Reason : " << SDL_GetError() << std::endl;
+	if(EXIT_SUCCESS != err) {
+		std::cerr << "RenderCopy() failed for rsrcId():" << drawParams.rsrcId << " Reason : " << SDL_GetError() << std::endl;
 	}
 }
 

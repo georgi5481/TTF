@@ -2036,6 +2036,8 @@ CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/Texture.cpp.o: ../sdl_utils/T
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
   /usr/include/c++/11/bits/charconv.h \
   /usr/include/c++/11/bits/basic_string.tcc \
+  ../utils/drawings/DrawParams.h \
+  ../utils/drawings/Point.h \
   /usr/include/c++/11/iostream \
   /usr/include/c++/11/ostream \
   /usr/include/c++/11/ios \
@@ -2433,7 +2435,9 @@ CMakeFiles/Scaling_and_Alphablending.dir/sdl_utils/containers/ImageContainer.cpp
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  ../sdl_utils/Texture.h
+  ../sdl_utils/Texture.h \
+  ../utils/drawings/DrawParams.h \
+  ../utils/drawings/Point.h
 
 CMakeFiles/Scaling_and_Alphablending.dir/utils/Time/Time.cpp.o: ../utils/Time/Time.cpp \
   /usr/include/stdc-predef.h \

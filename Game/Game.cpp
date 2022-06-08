@@ -55,6 +55,7 @@ void Game::handleEvent([[maybe_unused]]const InputEvent& e){
 	}
 
 		switch(e.key){
+		//MOVEMENT
 		case Keyboard::KEY_UP:
 		pressKeysImg.pos.y -= 10;
 		break;
@@ -72,7 +73,7 @@ void Game::handleEvent([[maybe_unused]]const InputEvent& e){
 		break;
 
 
-
+		//STRETCHING
 		case Keyboard::KEY_A:
 		pressKeysImg.width -= 10;
 		break;
@@ -84,6 +85,14 @@ void Game::handleEvent([[maybe_unused]]const InputEvent& e){
 		break;
 		case Keyboard::KEY_W:
 		pressKeysImg.height += 10;
+		break;
+
+		//OPACITY
+		case Keyboard::KEY_E:
+		pressKeysImg.opacity -= 10;
+		break;
+		case Keyboard::KEY_Q:
+		pressKeysImg.opacity += 10;
 		break;
 
 		default:
