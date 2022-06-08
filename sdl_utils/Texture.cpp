@@ -80,7 +80,7 @@ void Texture::setRenderer(SDL_Renderer* renderer){
 
 
 
-int32_t setBlendModeTexture(SDL_Texture *texture, BlendMode blendMode){
+int32_t setBlendModeTexture(SDL_Texture *texture, BlendMode blendMode){	//first we gave to the a blending mode and then to change the blending
 
 	//takes two arguments 1 to the texture we are gonna blend, 2nd to the blendmode
 if(EXIT_SUCCESS != SDL_SetTextureBlendMode(texture, static_cast<SDL_BlendMode>(blendMode))){
@@ -90,7 +90,7 @@ if(EXIT_SUCCESS != SDL_SetTextureBlendMode(texture, static_cast<SDL_BlendMode>(b
 return EXIT_SUCCESS;
 }
 
-int32_t setAlphaTexture(SDL_Texture *texture, int32_t alpha){
+int32_t setAlphaTexture(SDL_Texture *texture, int32_t alpha){//we need to set the blend mode at lease one time, and then we can call this function 100000 times.
 
 if(ZERO_OPACITY > alpha || alpha > FULL_OPACITY){	//can't make changes if the number is negative
 	std::cerr << "Error, invalid alpha value: " << alpha << " provided." << std::endl;

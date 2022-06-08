@@ -10,7 +10,7 @@
 
 //Own includes
 #include "sdl_utils/Texture.h"
-
+#include "utils/drawings/DrawParams.h"
 int32_t ImageContainer::init(const ImageContainerCfg& cfg){
 	for(const auto& pair : cfg.imageConfigs)
 	{
@@ -67,6 +67,12 @@ int32_t ImageContainer::loadSingleResource(const ImageCfg& resCfg, int32_t rsrcI
 			std::cerr << "createSurfaceFromFile failed for file : " << resCfg.location << std::endl;
 		return EXIT_FAILURE;
 		}
+
+	if(EXIT_SUCCESS != setBlendModeTexture(resCfg.location, texture)){
+			std::cerr << "createSurfaceFromFile failed for file : " << resCfg.location << std::endl;
+		return EXIT_FAILURE;
+		}
+
 	_textures[rsrcId] = texture;
 
 	//a good practice is to take out the reference, and then implement the values. Don't always search in the map with the key.
