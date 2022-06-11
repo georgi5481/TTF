@@ -34,6 +34,8 @@ private:
 	bool processFrame();
 	void handleEvent();
 
+	void loadText();
+
 	void limitFPS(int64_t elapsedTimeMicroSeconds);
 
 	MonitorWindow _window;

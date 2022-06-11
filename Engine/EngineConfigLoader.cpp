@@ -45,7 +45,7 @@ static void populateGameConfig(GameCfg& cfg){
 static void populateImageContainerConfig(ImageContainerCfg& cfg){
 
 	ImageCfg imageCfg;
-	imageCfg.location = "../resources/press_keys.png";
+	imageCfg.location = "../resources/pictures/press_keys.png";
 	imageCfg.height = PRESS_KEYS_WIDTH;
 	imageCfg.width = PRESS_KEYS_HEIGHT;
 
@@ -53,7 +53,7 @@ static void populateImageContainerConfig(ImageContainerCfg& cfg){
 	cfg.imageConfigs.insert(std::make_pair(TextureId::PRESS_KEYS,imageCfg));	//we have to pair them first with the ID
 
 
-	imageCfg.location = "../resources/layer_2.png";
+	imageCfg.location = "../resources/pictures/layer_2.png";
 	imageCfg.height = LAYER_2_IMG_WIDTH;
 	imageCfg.width = LAER_2_IMG_HEIGHT;
 

@@ -16,6 +16,7 @@
 #include "utils/thread/ThreadUtils.h"
 #include "utils/Time/Time.h"
 
+TTF_Font * gFont;
 
 int32_t Engine::init(const EngineConfig& cfg){
 
@@ -115,6 +116,9 @@ bool Engine::processFrame(){
 	return false;
 }
 
+void Engine::handleEvent(){
+_game.handleEvent(_event);
+}
 
 void Engine::limitFPS(int64_t elapsedTimeMicroSeconds){
 	constexpr auto maxFrames = 30;
@@ -129,31 +133,16 @@ void Engine::limitFPS(int64_t elapsedTimeMicroSeconds){
 
 
 
-void Engine::handleEvent(){
-_game.handleEvent(_event);
+
+
+void Engine::loadText(){
+	//argument 1 - path to the font; argument 2 - size of the font
+TTF_Font* font = TTF_OpenFont("../resources/fonts/AngelineVintage.ttf", 40);
+
+if(font == nullptr){
+	std::cerr << "error: " << SDL_GetError() << std::endl;
 }
-
-/*
-	while(true) {
-		if(event.pollEvent()){
-			if(event.type == TouchEvent::KEYBOARD_PRESS){
-				std::cout << "pressed key: " << (char)event.key << std::endl;
-			}
-			else if(event.type == TouchEvent::KEYBOARD_RELEASE){
-				std::cout << "released key: " << (char)event.key << std::endl;
-			}
-			else if(event.type == TouchEvent::TOUCH_PRESS){
-				std::cout << "mouse button idx pressed: " << event.mouseButton << std::endl;
-			}
-			else if(event.type == TouchEvent::TOUCH_RELEASE){
-				std::cout << "mouse button idx released: " << event.mouseButton << std::endl;
-			}
-			else {
-				std::cout << "event position X(" << event.pos.x << ") Y (" << event.pos.y << ")" << std::endl;
-			}
-		}
-	}*/
-
+}
 
 
 
