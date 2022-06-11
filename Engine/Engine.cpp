@@ -9,6 +9,7 @@
 
 //3rd-party includes
 //#include<thread>
+#include<SDL_ttf.h>
 
 //Own includes
 #include "Engine/config/EngineConfig.h"

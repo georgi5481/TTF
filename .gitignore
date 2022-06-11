@@ -1,7 +1,7 @@
-build
+/build
 .project
 .cproject
-.settings
+/.settings
 .autotools
 CMakeFiles
 CMakeCache.txt
