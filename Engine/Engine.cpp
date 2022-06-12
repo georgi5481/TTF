@@ -17,7 +17,7 @@
 #include "utils/Time/Time.h"
 #include "sdl_utils/Texture.h"
 
-TTF_Font* gFont = nullptr;
+
 int32_t gTextHeight = 0;
 int32_t gTextWidth = 0;
 SDL_Texture* gTextTexture = nullptr;
@@ -99,9 +99,14 @@ SDL_Texture* texture = nullptr;
 		texture = _imgContainer.getImageTexture(image.rsrcId);
 		_renderer.renderTexture(texture,image);
 	}
+	DrawParams textDrawParams;
+	textDrawParams.pos.x = 100;
+	textDrawParams.pos.y = 200;
+	textDrawParams.height = gTextWidth;
+	textDrawParams.height = gTextHeight;
+	_renderer.renderTexture(gTextTexture,textDrawParams);	//GPU render the texture
 
-
-		_renderer.finishFrame();	//update the image
+	_renderer.finishFrame();	//update the image
 }
 
 
@@ -154,11 +159,10 @@ void Engine::loadText(){
 	//trought the pointer of the surface we take the hight and with of the font
 	gTextWidth = textSurface->w;
 	gTextHeight = textSurface->h;
-
+	//we turn it into a texture
 	Texture::createTextureFromSurface(textSurface, gTextTexture);
 
-	//we turn it into a texture
-	SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, textSurface);
+	TTF_CloseFont(font);	//usually you should close the font at the end of the program so that you can use the font runtime
 }
 
 
