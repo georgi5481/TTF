@@ -15,8 +15,12 @@
 #include "Engine/config/EngineConfig.h"
 #include "utils/thread/ThreadUtils.h"
 #include "utils/Time/Time.h"
+#include "sdl_utils/Texture.h"
 
-TTF_Font * gFont;
+TTF_Font* gFont = nullptr;
+int32_t gTextHeight = 0;
+int32_t gTextWidth = 0;
+SDL_Texture* gTextTexture = nullptr;
 
 int32_t Engine::init(const EngineConfig& cfg){
 
@@ -137,11 +141,24 @@ void Engine::limitFPS(int64_t elapsedTimeMicroSeconds){
 
 void Engine::loadText(){
 	//argument 1 - path to the font; argument 2 - size of the font
-TTF_Font* font = TTF_OpenFont("../resources/fonts/AngelineVintage.ttf", 40);
+	TTF_Font* font = TTF_OpenFont("../resources/fonts/AngelineVintage.ttf", 40);
 
-if(font == nullptr){
-	std::cerr << "error: " << SDL_GetError() << std::endl;
-}
+	if(font == nullptr){
+		std::cerr <<  "Error. TTF_OpenFont failed: " << SDL_GetError() << std::endl;
+		return;
+	}
+	//we decide what color we would like to display the font
+	SDL_Color colorText = {.r = 127, .g =127, .b = 127, .a = 255};
+	//we create the font first as a surface
+	SDL_Surface * textSurface = TTF_RenderText_Solid(font, "Proba, probra. 1,2,3", colorText);
+	//trought the pointer of the surface we take the hight and with of the font
+	gTextWidth = textSurface->w;
+	gTextHeight = textSurface->h;
+
+	Texture::createTextureFromSurface(textSurface, gTextTexture);
+
+	//we turn it into a texture
+	SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, textSurface);
 }
 
 

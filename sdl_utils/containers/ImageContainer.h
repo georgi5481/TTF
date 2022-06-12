@@ -25,7 +25,7 @@ public:
 
 	SDL_Texture* getImageTexture(int32_t rsrcId) const;	//will basically search in the map below ( _textures )
 
-	Rectangle getImageFrame(int32_t rsrcId) const;		//this one will search in the other map below ( _textureFrames )
+	Rectangle getImageFrame(int32_t rsrcId) const;		//this one will search in the other map below for the pixel frame ( _textureFrames )
 private:
 
 	int32_t loadSingleResource(const ImageCfg& resCfg, int32_t rsrcId);

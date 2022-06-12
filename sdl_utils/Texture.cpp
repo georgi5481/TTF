@@ -66,6 +66,9 @@ int32_t Texture::createTextureFromSurface(SDL_Surface*& InOutSurface, SDL_Textur
 	outTexture = SDL_CreateTextureFromSurface(gRenderer, InOutSurface);
 	if(outTexture == nullptr){
 				outTexture = nullptr;
+
+				std::cerr << "SDL_CreateTextureFromSurface failed. " << std::endl;
+				return EXIT_FAILURE;
 	}
 
 	freeSurface(InOutSurface);
