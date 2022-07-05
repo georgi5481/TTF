@@ -51,6 +51,8 @@ int32_t Engine::init(const EngineConfig& cfg){
 	}
 
 
+	loadText();
+
 return EXIT_SUCCESS;
 }
 
@@ -93,12 +95,12 @@ void Engine::drawFrame(){
 
 	_game.draw(images);
 
-SDL_Texture* texture = nullptr;
-
-	for(const DrawParams& image : images){	//the function bellow accepts only const DrawParams !!! This is why we declare here a const object pointer
-		texture = _imgContainer.getImageTexture(image.rsrcId);
-		_renderer.renderTexture(texture,image);
-	}
+//SDL_Texture* texture = nullptr;
+//
+//	for(const DrawParams& image : images){	//the function bellow accepts only const DrawParams !!! This is why we declare here a const object pointer
+//		texture = _imgContainer.getImageTexture(image.rsrcId);
+//		_renderer.renderTexture(texture,image);
+//	}
 	DrawParams textDrawParams;
 	textDrawParams.pos.x = 100;
 	textDrawParams.pos.y = 200;
@@ -154,7 +156,7 @@ void Engine::loadText(){
 	//we create the font first as a surface
 	SDL_Surface * textSurface = TTF_RenderText_Solid(font, "Proba, probra. 1,2,3", colorText);
 	if(textSurface == nullptr){
-		std::cerr <<  "Error. TTF_RenderText_Solid failed for text. Reason: " << SDL_GetError() << std::endl;
+		std::cerr <<  "Error. TTF_RenderText_Solid failed for text. Reason	: " << SDL_GetError() << std::endl;
 
 	}
 	//trought the pointer of the surface we take the height and width of the font
