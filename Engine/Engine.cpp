@@ -102,7 +102,7 @@ SDL_Texture* texture = nullptr;
 	DrawParams textDrawParams;
 	textDrawParams.pos.x = 100;
 	textDrawParams.pos.y = 200;
-	textDrawParams.height = gTextWidth;
+	textDrawParams.width = gTextWidth;
 	textDrawParams.height = gTextHeight;
 	_renderer.renderTexture(gTextTexture,textDrawParams);	//GPU render the texture
 
@@ -153,11 +153,18 @@ void Engine::loadText(){
 	SDL_Color colorText = {.r = 127, .g =127, .b = 127, .a = 255};
 	//we create the font first as a surface
 	SDL_Surface * textSurface = TTF_RenderText_Solid(font, "Proba, probra. 1,2,3", colorText);
+	if(textSurface == nullptr){
+		std::cerr <<  "Error. TTF_RenderText_Solid failed for text. Reason: " << SDL_GetError() << std::endl;
+
+	}
 	//trought the pointer of the surface we take the height and width of the font
 	gTextWidth = textSurface->w;
 	gTextHeight = textSurface->h;
 	//we turn it into a texture
-	Texture::createTextureFromSurface(textSurface, gTextTexture);
+
+	if( EXIT_SUCCESS != Texture::createTextureFromSurface(textSurface, gTextTexture)){
+		std::cerr << "Failed for text." << std::endl;
+	}
 
 	TTF_CloseFont(font);	//usually you should close the font at the end of the program so that you can use the font runtime
 }
