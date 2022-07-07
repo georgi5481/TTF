@@ -13,8 +13,8 @@
 
 //constants
 namespace{		//the anonymous namespace will work only on this .cpp file
-constexpr auto WINDOW_WIDTH = 640;
-constexpr auto WINDOW_HEIGHT = 480;
+constexpr auto WINDOW_WIDTH = 800;
+constexpr auto WINDOW_HEIGHT = 800;
 constexpr auto WINDOW_NAME = "Hardware_Redering";
 
 
