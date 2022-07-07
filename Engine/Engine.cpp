@@ -145,16 +145,16 @@ void Engine::limitFPS(int64_t elapsedTimeMicroSeconds){
 
 void Engine::loadText(){
 	//argument 1 - path to the font; argument 2 - size of the font
-	TTF_Font* font = TTF_OpenFont("../resources/fonts/AngelineVintage.ttf", 40);
+	TTF_Font* font = TTF_OpenFont("../resources/fonts/AngelineVintage.ttf", 100);
 
 	if(font == nullptr){
 		std::cerr <<  "Error. TTF_OpenFont failed: " << SDL_GetError() << std::endl;
 		return;
 	}
 	//we decide what color we would like to display the font
-	SDL_Color colorText = {.r = 127, .g =127, .b = 127, .a = 255};
+	SDL_Color colorText = {.r = 0, .g =0, .b = 255, .a = 255};
 	//we create the font first as a surface
-	SDL_Surface * textSurface = TTF_RenderText_Solid(font, "Proba, probra. 1,2,3", colorText);
+	SDL_Surface * textSurface = TTF_RenderText_Solid(font, "300 !", colorText);
 	if(textSurface == nullptr){
 		std::cerr <<  "Error. TTF_RenderText_Solid failed for text. Reason	: " << SDL_GetError() << std::endl;
 

@@ -23,7 +23,6 @@ Engine engine;
 			return EXIT_FAILURE;
 		}
 
-
 		engine.start();
 
 		engine.deinit();

@@ -16,7 +16,8 @@
 enum WindowFlags{	//these concrete numbers comes from the SDL flags
 	WINDOW_SHOWN = 4,			//SDL_WindowShown
 	WINDOW_FULLSCREEN = 4097,	//SDL_WindowFullscreen
-	WINDOW_BORDERLESS = 16		//Make the same window but without borders
+	WINDOW_BORDERLESS = 16,		//Make the same window but without borders
+	WINDOW_RESIZABLE = 32
 };
 
 struct MonitorWindowCfg{
