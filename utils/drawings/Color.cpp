@@ -1,5 +1,5 @@
 //Corresponding header
-#include "Renderer.h"
+#include "Color.h"
 
 //C system includes
 
@@ -24,4 +24,14 @@ const Color YELLOW(255, 255, 0, 255);
 const Color ORANGE(255, 128, 0, 255);
 const Color PURPLE(255, 0, 128, 255);
 const Color FULL_TRANSPARENT(0, 0, 0, 0);
+} //namespace Colors
+
+
+Color::Color( const uint8_t red,  const uint8_t green,  const uint8_t blue,
+			 const uint8_t alpha ){
+
+	rgba.r = red;
+	rgba.g = green;
+	rgba.b = blue;
+	rgba.a = alpha;
 }

@@ -102,8 +102,8 @@ void Engine::drawFrame(){
 //		_renderer.renderTexture(texture,image);
 //	}
 	DrawParams textDrawParams;
-	textDrawParams.pos.x = 100;
-	textDrawParams.pos.y = 200;
+	textDrawParams.pos.x = 0;
+	textDrawParams.pos.y = 0;
 	textDrawParams.width = gTextWidth;
 	textDrawParams.height = gTextHeight;
 	_renderer.renderTexture(gTextTexture,textDrawParams);	//GPU render the texture
@@ -145,7 +145,7 @@ void Engine::limitFPS(int64_t elapsedTimeMicroSeconds){
 
 void Engine::loadText(){
 	//argument 1 - path to the font; argument 2 - size of the font
-	TTF_Font* font = TTF_OpenFont("../resources/fonts/AngelineVintage.ttf", 100);
+	TTF_Font* font = TTF_OpenFont("../resources/fonts/AngelineVintage.ttf", 300);
 
 	if(font == nullptr){
 		std::cerr <<  "Error. TTF_OpenFont failed: " << SDL_GetError() << std::endl;

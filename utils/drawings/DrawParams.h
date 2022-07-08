@@ -46,7 +46,7 @@ struct DrawParams {
 	int32_t rsrcId = INVALID_RSRC_ID;
 	//unique Id for the texts
 	int32_t textId ;
-	}
+	};
 
 };
 
