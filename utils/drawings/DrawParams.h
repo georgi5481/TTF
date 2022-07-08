@@ -41,8 +41,13 @@ struct DrawParams {
 
 	int32_t opacity = FULL_OPACITY;	//opacity is 8bit int, but in order not to cast it every time we use the int32
 
+	union{
 	//unique resourceId
 	int32_t rsrcId = INVALID_RSRC_ID;
+	//unique Id for the texts
+	int32_t textId ;
+	}
+
 };
 
 
