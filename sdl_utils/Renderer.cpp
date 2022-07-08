@@ -17,7 +17,7 @@
 
 int32_t Renderer::init(SDL_Window * window){
 	//first we have to hint what we want to fix and then we have to render the image we want.
-	if(!SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1")){
+	if(!SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1")){	//1 means it will use linear algorithm
 		std::cerr << "Warning: Linear texture filtering not enabled ! "
 				"SDL_SetHint() failed. SDL Error:" << SDL_GetError() << std::endl;
 		return EXIT_FAILURE;
@@ -38,7 +38,7 @@ int32_t Renderer::init(SDL_Window * window){
 	}
 
 	//SDL_SetRenderDrawColor will place a color on every pixel on the buffer we are clearing
-	if(EXIT_SUCCESS != SDL_SetRenderDrawColor(_sdlRenderer, 0, 0, 0, SDL_ALPHA_OPAQUE)){
+	if(EXIT_SUCCESS != SDL_SetRenderDrawColor(_sdlRenderer, 200, 200, 0, SDL_ALPHA_OPAQUE)){
 		std::cerr << "SDL_SetRenderDrawColor failed. Reason:" << SDL_GetError() << std::endl;
 		return EXIT_FAILURE;
 
