@@ -90,18 +90,16 @@ void Renderer::renderTexture(SDL_Texture* texture, const DrawParams& drawParams)
 
 
 	}
-
-
-	/*renderCopy arguments
-	 * second - The source texture
-	 * third - NULL for the entire texture to be displayed
-	 * fourth - NULL for the entire rendering target*/
-
 	if(EXIT_SUCCESS != err) {
 		std::cerr << "RenderCopy() failed for rsrcId():" << drawParams.rsrcId << " Reason : " << SDL_GetError() << std::endl;
 	}
 }
 
 
+void Renderer::DrawText(const DrawParams& drawParams, SDL_Texture* texture){
 
+}
+void Renderer::Drawimage(const DrawParams& drawParams, SDL_Texture* texture){
+
+}
 

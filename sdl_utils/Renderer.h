@@ -34,7 +34,12 @@ public:
 	void finishFrame();		//pointer swap so that we visualise the updated image
 	void renderTexture(SDL_Texture* texture, const DrawParams& drawParams); //for drawing GPU primitives
 private:
+
+	void DrawText(const DrawParams& drawParams, SDL_Texture* texture);
+	void Drawimage(const DrawParams& drawParams, SDL_Texture* texture);
 	SDL_Renderer *_sdlRenderer = nullptr;
+
+
 };
 
 #endif /* SDL_UTILS_RENDERER_H_ */

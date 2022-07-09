@@ -21,6 +21,11 @@ inline constexpr auto INVALID_RSRC_ID = -1;
 inline constexpr auto FULL_OPACITY = 255;
 inline constexpr auto ZERO_OPACITY = 0;
 
+enum class WidgetType : uint8_t{
+	IMAGE,
+	TEXT,
+	UNKNOWN
+};
 
 enum class BlendMode: uint8_t {	//instead of using normal int, this way we can force the enum to be from uint8_t
 	NONE = 0,	//Values for SDL_BLENDMODE_NONE
@@ -47,6 +52,8 @@ struct DrawParams {
 	//unique Id for the texts
 	int32_t textId ;
 	};
+
+	WidgetType widgetType = WidgetType::UNKNOWN;	//to know what we are going to show
 
 };
 
