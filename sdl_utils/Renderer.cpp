@@ -76,10 +76,22 @@ void Renderer::renderTexture(SDL_Texture* texture, const DrawParams& drawParams)
 	else if(WidgetType::TEXT == drawParams.widgetType){
 		DrawText(drawParams,texture);
 	}
+	else{
+		std::cerr << "Error unknown widgetType : " << static_cast<int>(drawParams.widgetType) << " for rsrcId : " << drawParams.rsrcId;
+	}
 }
-void Renderer::DrawText(const DrawParams& drawParams, SDL_Texture* texture){
 
+void Renderer::DrawText(const DrawParams& drawParams, SDL_Texture* texture){
+	const SDL_Rect destRect = {.x = drawParams.pos.x, .y = drawParams.pos.y,		//destination rectangle basically sets to place the texture on the left corner with full lenght
+								.w = drawParams.width, .h = drawParams.height };
+
+	const int32_t err = SDL_RenderCopy(_sdlRenderer, texture,nullptr, & destRect);
+
+	if(EXIT_SUCCESS != err) {
+		std::cerr << "RenderCopy() failed for rsrcId():" << drawParams.rsrcId << " Reason : " << SDL_GetError() << std::endl;
+	}
 }
+
 void Renderer::DrawImage(const DrawParams& drawParams, SDL_Texture* texture){
 
 	const SDL_Rect destRect = {.x = drawParams.pos.x, .y = drawParams.pos.y,		//destination rectangle basically sets to place the texture on the left corner with full lenght
