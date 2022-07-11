@@ -77,7 +77,7 @@ void Renderer::renderTexture(SDL_Texture* texture, const DrawParams& drawParams)
 		DrawText(drawParams,texture);
 	}
 	else{
-		std::cerr << "Error unknown widgetType : " << static_cast<int>(drawParams.widgetType) << " for rsrcId : " << drawParams.rsrcId;
+		std::cerr << "Error unknown widgetType : " << static_cast<int>(drawParams.widgetType) << " for rsrcId : " << drawParams.rsrcId << std::endl;
 	}
 }
 
