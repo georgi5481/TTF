@@ -151,13 +151,7 @@ void Engine::limitFPS(int64_t elapsedTimeMicroSeconds){
 
 
 void Engine::loadText(){
-	//argument 1 - path to the font; argument 2 - size of the font
-	TTF_Font* font = TTF_OpenFont("../resources/fonts/AngelineVintage.ttf", 300);
 
-	if(font == nullptr){
-		std::cerr <<  "Error. TTF_OpenFont failed: " << SDL_GetError() << std::endl;
-		return;
-	}
 	//we decide what color we would like to display the font
 	SDL_Color colorText = {.r = 0, .g =0, .b = 255, .a = 255};
 	//we create the font first as a surface
