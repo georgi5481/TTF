@@ -86,7 +86,7 @@ void Renderer::DrawText(const DrawParams& drawParams, SDL_Texture* texture){
 								.w = drawParams.width, .h = drawParams.height };
 
 	const int32_t err = SDL_RenderCopy(_sdlRenderer, texture,nullptr, & destRect);
-
+	//TODO: handle properly - do not set alpha every time
 	if(EXIT_SUCCESS != err) {
 		std::cerr << "RenderCopy() failed for rsrcId():" << drawParams.rsrcId << " Reason : " << SDL_GetError() << std::endl;
 	}

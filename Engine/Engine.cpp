@@ -95,17 +95,24 @@ void Engine::drawFrame(){
 
 	_game.draw(images);
 
-//SDL_Texture* texture = nullptr;
-//
-//	for(const DrawParams& image : images){	//the function bellow accepts only const DrawParams !!! This is why we declare here a const object pointer
-//		texture = _imgContainer.getImageTexture(image.rsrcId);
-//		_renderer.renderTexture(texture,image);
-//	}
+
+SDL_Texture* texture = nullptr;
+
+	for(const DrawParams& image : images){	//will basically print out all images we contained in the map with our flyweight pattern
+
+		//the function bellow accepts only const DrawParams !!! This is why we declare here a const object pointer
+		texture = _imgContainer.getImageTexture(image.rsrcId);
+		_renderer.renderTexture(texture,image);
+	}
+
 	DrawParams textDrawParams;
 	textDrawParams.pos.x = 0;
 	textDrawParams.pos.y = 0;
 	textDrawParams.width = gTextWidth;
 	textDrawParams.height = gTextHeight;
+	textDrawParams.widgetType = WidgetType::TEXT;
+	textDrawParams.opacity = 150;
+	textDrawParams.width /= 4;
 	_renderer.renderTexture(gTextTexture,textDrawParams);	//GPU render the texture
 
 	_renderer.finishFrame();	//update the image
