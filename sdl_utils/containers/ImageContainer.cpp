@@ -11,11 +11,12 @@
 //Own includes
 #include "sdl_utils/Texture.h"
 #include "utils/drawings/DrawParams.h"
+
 int32_t ImageContainer::init(const ImageContainerCfg& cfg){
 	for(const auto& pair : cfg.imageConfigs)
 	{
-		const auto& elem = pair.second;
-		const auto rsrcId = pair.first;
+		const auto& elem = pair.second;	//taking the ImgConfing that contains path, width and height
+		const auto rsrcId = pair.first;	//taking the key value(int)
 		if(EXIT_SUCCESS !=loadSingleResource(elem, rsrcId)){
 				std::cerr << "loadSingleResource failed for file : " << elem.location << std::endl;
 			return EXIT_FAILURE;
@@ -28,7 +29,7 @@ int32_t ImageContainer::init(const ImageContainerCfg& cfg){
 
 
 int32_t ImageContainer::deinit(){
-	for(auto& pair : _textures)	//we dont need const reference since we are going to modificate the texture.
+	for(auto& pair : _textures)
 	{
 		Texture::freeTexture(pair.second);
 	}
@@ -75,7 +76,7 @@ int32_t ImageContainer::loadSingleResource(const ImageCfg& resCfg, int32_t rsrcI
 
 	_textures[rsrcId] = texture;
 
-	//a good practice is to take out the reference, and then implement the values. Don't always search in the map with the key.
+	//a good practice is to take out the reference, and then implement the values. Don't search in the map with the key cuz it will make a new object if not found.
 	Rectangle& rect = _textureFrames[rsrcId];	//using this way the reference is so much better
 	rect.x = 0;
 	rect.y = 0;
