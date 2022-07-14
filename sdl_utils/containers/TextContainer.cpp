@@ -4,7 +4,7 @@
 //C system includes
 
 //C++ system includes
-
+#include<iostream>
 //3rd-party includes
 #include <SDL_ttf.h>
 //Own includes
@@ -23,10 +23,8 @@ int32_t TextContainer::init(const TextContainerCfg& cfg){
 					<< ". Reason: " << SDL_GetError() << std::endl;
 			return EXIT_FAILURE;
 		}
-		_fonts[key] =
+		_fonts[key] = currFont;
 	}
-
-	TTF_Font* font = currFont;
 
 	return EXIT_SUCCESS;
 }
@@ -34,4 +32,7 @@ int32_t TextContainer::init(const TextContainerCfg& cfg){
 void TextContainer::deinit(){
 
 
+	for(auto& pair: _fonts){
+		TTF_CloseFont(pair.second);	//we have to close the font otherwise we will have memory leak
+	}
 }

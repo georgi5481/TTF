@@ -14,7 +14,7 @@
 
 //Forward Declaration
 struct SDL_Textures;
-typedef struct TTF_Font;
+struct TTF_Font;
 
 
 class TextContainer {
