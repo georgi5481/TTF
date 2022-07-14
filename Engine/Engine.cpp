@@ -18,9 +18,6 @@
 #include "sdl_utils/Texture.h"
 
 
-int32_t gTextHeight = 0;
-int32_t gTextWidth = 0;
-SDL_Texture* gTextTexture = nullptr;
 
 int32_t Engine::init(const EngineConfig& cfg){
 
@@ -39,6 +36,11 @@ int32_t Engine::init(const EngineConfig& cfg){
 			return EXIT_FAILURE;
 	}
 
+	if (EXIT_SUCCESS != _textContainer.init(cfg.textContainerCfg)){		//initialising the image container logic (a simple map  with int as ID and string as the path)
+			std::cerr << "textContainer init() failed. Reason: " << std::endl;
+			return EXIT_FAILURE;
+	}
+
 	if (EXIT_SUCCESS != _event.init()){			//scan what event occurred
 			std::cerr << "InputEvent failed. Reason: " << std::endl;
 			return EXIT_FAILURE;
@@ -51,8 +53,6 @@ int32_t Engine::init(const EngineConfig& cfg){
 	}
 
 
-	loadText();
-
 return EXIT_SUCCESS;
 }
 
@@ -63,6 +63,7 @@ void Engine::deinit(){	//always deinitialise backwards according to initialising
 	_game.deinit();
 	_event.deinit();
 	_imgContainer.deinit();
+	_textContainer.deinit();
 	_renderer.deinit();
 	_window.deinit();
 }
@@ -105,17 +106,6 @@ SDL_Texture* texture = nullptr;
 		_renderer.renderTexture(texture,image);
 	}
 
-	DrawParams textDrawParams;
-	textDrawParams.pos.x = 0;
-	textDrawParams.pos.y = 0;
-	textDrawParams.width = gTextWidth;
-	textDrawParams.height = gTextHeight;
-	textDrawParams.widgetType = WidgetType::TEXT;
-	textDrawParams.opacity = 150;
-	textDrawParams.width /= 4;
-	_renderer.renderTexture(gTextTexture,textDrawParams);	//GPU render the texture
-
-	_renderer.finishFrame();	//update the image
 }
 
 
@@ -150,27 +140,6 @@ void Engine::limitFPS(int64_t elapsedTimeMicroSeconds){
 }
 
 
-void Engine::loadText(){
-
-	//we decide what color we would like to display the font
-	SDL_Color colorText = {.r = 0, .g =0, .b = 255, .a = 255};
-	//we create the font first as a surface
-	SDL_Surface * textSurface = TTF_RenderText_Solid(font, "300 !", colorText);
-	if(textSurface == nullptr){
-		std::cerr <<  "Error. TTF_RenderText_Solid failed for text. Reason	: " << SDL_GetError() << std::endl;
-
-	}
-	//trought the pointer of the surface we take the height and width of the font
-	gTextWidth = textSurface->w;
-	gTextHeight = textSurface->h;
-	//we turn it into a texture
-
-	if( EXIT_SUCCESS != Texture::createTextureFromSurface(textSurface, gTextTexture)){
-		std::cerr << "Failed for text." << std::endl;
-	}
-
-	TTF_CloseFont(font);	//usually you should close the font at the end of the program so that you can use the font runtime
-}
 
 
 

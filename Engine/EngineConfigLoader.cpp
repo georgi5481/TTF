@@ -74,15 +74,8 @@ static void populateTextContainerConfig(TextContainerCfg& cfg){
 	fontCfg.location = getFilePath("/resources/fonts/AngelineVintage.ttf");
 	fontCfg.fontSize = ANGELINE_VINTAGE_40_FONTSIZE;
 
+	cfg.fontConfigs.insert(std::make_pair(FontId::ANGELINE_VINTAGE_40,fontCfg));	//we have to pair them first with the ID
 
-	cfg.imageConfigs.insert(std::make_pair(TextureId::PRESS_KEYS,imageCfg));	//we have to pair them first with the ID
-
-
-	imageCfg.location = "../resources/pictures/layer_2.png";
-	imageCfg.height = LAYER_2_IMG_WIDTH;
-	imageCfg.width = LAER_2_IMG_HEIGHT;
-
-	cfg.imageConfigs.insert(std::make_pair(TextureId::LAYER_2,imageCfg));	//we have to pair them first with the ID
 }
 
 
@@ -90,7 +83,8 @@ EngineConfig EngineConfigLoader::loadConfig(){
 	EngineConfig cfg;
 
 	populateMonitorConfig(cfg.windowCfg);
-	populateImageContainerConfig(cfg.imageContainerCfg);	//have to change it
+	populateImageContainerConfig(cfg.imageContainerCfg);
+	populateTextContainerConfig(cfg.textContainerCfg);
 	populateGameConfig(cfg.gameCfg);
 
 	return cfg;

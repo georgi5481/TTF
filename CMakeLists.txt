@@ -50,7 +50,7 @@ add_executable(
 	${_BASE_DIR}/Game/Game.cpp
 	${_BASE_DIR}/Game/config/GameCfg.h
 	
-	${_BASE_DIR}/sdl_utils/config/MonitorWindCfg.h
+	${_BASE_DIR}/sdl_utils/config/MonitorWindowCfg.h
 	${_BASE_DIR}/sdl_utils/config/ImageContainerCfg.h
 	${_BASE_DIR}/sdl_utils/config/TextContainerCfg.h
 	

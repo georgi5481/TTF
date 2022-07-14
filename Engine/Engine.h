@@ -15,6 +15,7 @@
 #include "sdl_utils/Renderer.h"
 #include "sdl_utils/InputEvent.h"
 #include "sdl_utils/containers/ImageContainer.h"
+#include "sdl_utils/containers/TextContainer.h"
 
 //Forward Declaration
 struct EngineConfig;
@@ -34,7 +35,6 @@ private:
 	bool processFrame();
 	void handleEvent();
 
-	void loadText();
 
 	void limitFPS(int64_t elapsedTimeMicroSeconds);
 
@@ -42,6 +42,7 @@ private:
 	InputEvent _event;
 	Renderer _renderer;
 	ImageContainer _imgContainer;
+	TextContainer _textContainer;
 	Game _game;
 };
 

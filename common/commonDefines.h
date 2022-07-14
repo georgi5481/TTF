@@ -12,16 +12,22 @@
 
 namespace TextureId {
 
-enum ResourceId {
+	enum ResourceId {
 
-	PRESS_KEYS,
-	LAYER_2
-};
+		PRESS_KEYS,
+		LAYER_2
+	};
 
 
 }	//end of namespace TextureId
 
+namespace FontId{
 
+	enum FontIdKeys{
+	ANGELINE_VINTAGE_40
+	};
+
+} //end of namespace FontIdKeys
 
 
 #endif /* COMMON_COMMONDEFINES_H_ */
