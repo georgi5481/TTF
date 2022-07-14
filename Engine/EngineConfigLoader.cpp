@@ -11,6 +11,7 @@
 //Own includes
 #include "common/commonDefines.h"
 #include "sdl_utils/containers/TextContainer.h"
+
 //constants
 namespace{		//the anonymous namespace will work only on this .cpp file
 constexpr auto WINDOW_WIDTH = 800;

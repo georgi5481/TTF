@@ -8,7 +8,7 @@
 //3rd-party includes
 #include <SDL_ttf.h>
 //Own includes
-
+#include"sdl_utils/config/TextContainerCfg.h"
 
 int32_t TextContainer::init(const TextContainerCfg& cfg){
 	TTF_Font* currFont = nullptr;
