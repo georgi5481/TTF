@@ -20,9 +20,6 @@
 //Forward Declaration
 struct EngineConfig;
 
-
-
-
 class Engine {
 public:
 	int32_t init(const EngineConfig& cfg);

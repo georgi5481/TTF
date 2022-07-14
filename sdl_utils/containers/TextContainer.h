@@ -11,6 +11,7 @@
 
 //Own includes
 
+#include"sdl_utils/config/TextContainerCfg.h"
 
 //Forward Declaration
 struct SDL_Textures;
