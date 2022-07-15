@@ -1,4 +1,4 @@
-#ifndef ENGINE_CONFIG_ENGINECONFIG_H_
+#ifndef ENGINE_CONFIG_ENGINECONFIG_H_populateTextContainerConfig
 #define ENGINE_CONFIG_ENGINECONFIG_H_
 
 //C system includes
@@ -19,7 +19,6 @@
 
 struct EngineConfig{
 	MonitorWindowCfg windowCfg;
-	//soon to populate other configs
 	ImageContainerCfg imageContainerCfg;
 	TextContainerCfg textContainerCfg;
 	GameCfg gameCfg;

@@ -11,7 +11,7 @@
 #include<SDL_ttf.h>
 //Own includes
 
-int32_t TextContainer::init(const TextContainerCfg& cfg){
+int32_t TextContainer::init(const TextContainerCfg &cfg){
 	TTF_Font* currFont = nullptr ;
 	for(const auto& pair : cfg.fontConfigs){
 		const auto key = pair.first;
