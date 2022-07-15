@@ -5,11 +5,12 @@
 
 //C++ system includes
 #include<cstdint>
+#include<stdlib.h>
 #include<iostream>
 
 //3rd-party includes
 //#include<thread>
-#include<SDL_ttf.h>
+//#include<SDL_ttf.h>
 
 //Own includes
 #include "Engine/config/EngineConfig.h"

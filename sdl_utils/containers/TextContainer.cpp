@@ -5,12 +5,14 @@
 
 //C++ system includes
 #include<iostream>
+#include<unordered_map>
+#include<cstdint>
 //3rd-party includes
-#include <SDL_ttf.h>
+#include<SDL_ttf.h>
 //Own includes
 
 int32_t TextContainer::init(const TextContainerCfg& cfg){
-	TTF_Font* currFont = nullptr;
+	TTF_Font* currFont = nullptr ;
 	for(const auto& pair : cfg.fontConfigs){
 		const auto key = pair.first;
 		const FontCfg& fontCfg = pair.second;

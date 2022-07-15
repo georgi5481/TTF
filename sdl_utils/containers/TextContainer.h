@@ -10,13 +10,12 @@
 //3rd-party includes
 
 //Own includes
-
 #include"sdl_utils/config/TextContainerCfg.h"
+
 
 //Forward Declaration
 struct SDL_Textures;
-struct TTF_Font;
-struct TextContainerCfg;
+typedef struct _TTF_Font TTF_Font;
 
 class TextContainer {
 
