@@ -16,6 +16,8 @@
 struct SDL_Surface;
 struct SDL_Texture;
 struct SDL_Renderer;
+struct Color;
+typedef struct _TTF_Font TTF_Font;
 
 class Texture {	//a class with static functions is equal to a namespace
 public:
@@ -26,6 +28,9 @@ public:
 	 static int32_t createTextureFromFile(const std::string& filePath, SDL_Texture*& outTexture);
 
 	 static int32_t createTextureFromSurface(SDL_Surface*& InOutSurface, SDL_Texture*& outTexture);
+
+	 void createTextureFromText(const std::string& text, const Color & color, TTF_Font* font,
+			 	 	 	 SDL_Texture*& outTexture, int32_t &outTextWidth, int32_t &outTextHeight);
 
 
 	 static void freeSurface(SDL_Surface*& outSurface);

@@ -10,10 +10,11 @@
 #include <SDL_surface.h>
 #include <SDL_image.h>
 #include <SDL_render.h>
+#include <SDL_ttf.h> //for SDL_RenderText_Blended function
 //Own includes
-
+#include"utils/drawings/Color.h"
 //Forward Declaration
-struct SDL_Surface;
+//struct SDL_Surface;
 
 static SDL_Renderer* gRenderer = nullptr;
 
@@ -76,6 +77,26 @@ int32_t Texture::createTextureFromSurface(SDL_Surface*& InOutSurface, SDL_Textur
 	return EXIT_SUCCESS;
 }
 
+void Texture::createTextureFromText(const std::string& text, const Color & color, TTF_Font* font,
+		 	 	 	 SDL_Texture*& outTexture, int32_t &outTextWidth, int32_t &outTextHeight){
+
+
+	//since static cast won't compile we use reinterpret_cast
+	const SDL_Color* sdlColor = reinterpret_cast<SDL_Color*>(&color.rgba);
+	//basically we take a pointer of our own declared structure RGBA, and we cast it into the structure we need so that we encapsulate the SDL
+
+
+
+	SDL_Surface* textSurface = TTF_RenderText_Blended(font, text.c_str(), *sdlColor);
+
+		if(textSurface = nullptr){
+			std::cerr << "TTF_RenderText_Blended() failed. Reason : " << SDL_GetError() << std::endl;
+			return EXIT_FAILURE;
+		}
+
+
+	return EXIT_SUCCESS;
+}
 
 
 void Texture::setRenderer(SDL_Renderer* renderer){

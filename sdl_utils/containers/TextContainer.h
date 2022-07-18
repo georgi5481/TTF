@@ -25,10 +25,10 @@ public:
 
 	void deinit();
 
-	void createText(const char* text, const Color & color, int32_t fontId,
+	void createText(const std::string& text, const Color & color, int32_t fontId,
 					int32_t &outTextId, int32_t &outTextWidth, int32_t &outTextHeight);
 
-	void reloadText(const char* text, const Color & color, int32_t fontId,
+	void reloadText(const std::string& text, const Color & color, int32_t fontId,
 					int32_t &outTextId, int32_t &outTextWidth, int32_t &outTextHeight);
 
 	void unloadText(int32_t textId);

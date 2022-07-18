@@ -40,3 +40,21 @@ void TextContainer::deinit(){
 		TTF_CloseFont(pair.second);	//we have to close the font otherwise we will have memory leak
 	}
 }
+
+void TextContainer::createText(const std::string& text, const Color & color, int32_t fontId,
+				int32_t &outTextId, int32_t &outTextWidth, int32_t &outTextHeight){
+
+}
+
+void TextContainer::reloadText(const std::string& text, const Color & color, int32_t fontId,
+				int32_t &outTextId, int32_t &outTextWidth, int32_t &outTextHeight){
+
+}
+
+void TextContainer::unloadText(int32_t textId){
+
+}
+
+SDL_Texture* TextContainer::getTextTexture(int32_t textId) const{
+
+}
