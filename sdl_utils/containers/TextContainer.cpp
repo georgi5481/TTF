@@ -9,7 +9,10 @@
 #include<cstdint>
 //3rd-party includes
 #include<SDL_ttf.h>
+
 //Own includes
+#include"utils/drawings/Color.h"
+
 
 int32_t TextContainer::init(const TextContainerCfg &cfg){
 	TTF_Font* currFont = nullptr ;
