@@ -85,17 +85,18 @@ void Texture::createTextureFromText(const std::string& text, const Color & color
 	const SDL_Color* sdlColor = reinterpret_cast<SDL_Color*>(&color.rgba);
 	//basically we take a pointer of our own declared structure RGBA, and we cast it into the structure we need so that we encapsulate the SDL
 
-
-
 	SDL_Surface* textSurface = TTF_RenderText_Blended(font, text.c_str(), *sdlColor);
 
-		if(textSurface = nullptr){
-			std::cerr << "TTF_RenderText_Blended() failed. Reason : " << SDL_GetError() << std::endl;
-			return EXIT_FAILURE;
-		}
+	if(textSurface == nullptr){
+		std::cerr << "TTF_RenderText_Blended() failed. Reason : " << SDL_GetError() << std::endl;
+		return;
+	}
 
+	if(EXIT_SUCCESS != Texture::createTextureFromSurface(textSurface, outTexture)){	//will load it into the GPU
+		std::cerr << "createTextureFromSurface() failed for text : " << text << std::endl;
+		return;
+	}
 
-	return EXIT_SUCCESS;
 }
 
 

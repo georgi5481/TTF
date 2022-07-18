@@ -12,6 +12,7 @@
 
 //Own includes
 #include"utils/drawings/Color.h"
+#include"sdl_utils/Texture.h"
 
 
 int32_t TextContainer::init(const TextContainerCfg &cfg){
@@ -44,7 +45,24 @@ void TextContainer::deinit(){
 void TextContainer::createText(const std::string& text, const Color & color, int32_t fontId,
 				int32_t &outTextId, int32_t &outTextWidth, int32_t &outTextHeight){
 
+	//the third parameter accepts TTF_Font
+	auto it = _fonts.find(fontId);		//a save mechanism for searching in the map. Cuz if not found - we will create new element
+	if(it == _fonts.end()){
+		std::cerr << "Error, fontId: " << fontId << "could not be found. Will not create text: " << text << std::endl;
+		return;
+	}
+	TTF_Font* font = it->second;	//will point to the second element of the map
+
+	SDL_Texture* textTexture = nullptr;
+
+	if(EXIT_SUCCESS != Texture::createTextureFromText(
+			text, color, font, textTexture, outTextWidth, outTextHeight)){	//the game will fill the text width of the object
+
+		std::cerr << "Error, createTextureFromText() failed for text: " << text << std::endl;
+		return;
+	}
 }
+
 
 void TextContainer::reloadText(const std::string& text, const Color & color, int32_t fontId,
 				int32_t &outTextId, int32_t &outTextWidth, int32_t &outTextHeight){
