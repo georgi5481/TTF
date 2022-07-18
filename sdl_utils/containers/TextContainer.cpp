@@ -61,6 +61,8 @@ void TextContainer::createText(const std::string& text, const Color & color, int
 		std::cerr << "Error, createTextureFromText() failed for text: " << text << std::endl;
 		return;
 	}
+
+	occupyFreeSlotIndex(outTextId, textTexture);
 }
 
 
@@ -71,8 +73,34 @@ void TextContainer::reloadText(const std::string& text, const Color & color, int
 
 void TextContainer::unloadText(int32_t textId){
 
+	if(0 > textId || textId >= static_cast<int32_t>(_textures.size())){
+		std::cerr <<  "Error, trying to unload non-existing textId: " << textId << std::endl;
+	}
 }
 
 SDL_Texture* TextContainer::getTextTexture(int32_t textId) const{
+
+}
+
+void TextContainer::occupyFreeSlotIndex(int32_t & outIdx, SDL_Texture* texture){
+	const int32_t size = static_cast<int32_t>(_textures.size());
+
+	bool foundIdx = false;
+	for(int32_t i = 0; i<size; ++i){
+		if(_textures[i] == nullptr){	//found a free index where we can save
+			outIdx = i;
+			_textures[i] = texture;
+			return;
+		}
+	}
+	if(!foundIdx){
+		_textures.push_back(texture);
+		outIdx = size;
+	}
+
+}
+
+void TextContainer::freeSlotIndex(int32_t index){
+
 
 }

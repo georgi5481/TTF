@@ -35,6 +35,9 @@ public:
 
 	SDL_Texture* getTextTexture(int32_t textId) const;
 private:
+	void occupyFreeSlotIndex(int32_t & ooutIdx, SDL_Texture* texture);
+	void freeSlotIndex(int32_t index);
+
 	std::vector<SDL_Texture*> _textures; //the textures we will be drawning
 
 	std::unordered_map<int32_t, TTF_Font*> _fonts;
