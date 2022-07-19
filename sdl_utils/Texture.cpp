@@ -77,12 +77,12 @@ int32_t Texture::createTextureFromSurface(SDL_Surface*& InOutSurface, SDL_Textur
 	return EXIT_SUCCESS;
 }
 
-void Texture::createTextureFromText(const std::string& text, const Color & color, TTF_Font* font,
-		 	 	 	 SDL_Texture*& outTexture, int32_t &outTextWidth, int32_t &outTextHeight){
+void Texture::createTextureFromText(const std::string& text, const Color& color, TTF_Font* font,
+ 	 	 SDL_Texture *&outTexture, int32_t &outTextWidth, int32_t &outTextHeight){
 
 
-	//since static cast won't compile we use reinterpret_cast
-	const SDL_Color* sdlColor = reinterpret_cast<SDL_Color*>(&color.rgba);
+	//since static cast won't compile we use reinterpret_cast cuz we need to cast it into const color
+	const SDL_Color* sdlColor = reinterpret_cast<const SDL_Color*>(&color.rgba);
 	//basically we take a pointer of our own declared structure RGBA, and we cast it into the structure we need so that we encapsulate the SDL
 
 	SDL_Surface* textSurface = TTF_RenderText_Blended(font, text.c_str(), *sdlColor);

@@ -66,20 +66,48 @@ void TextContainer::createText(const std::string& text, const Color & color, int
 }
 
 
-void TextContainer::reloadText(const std::string& text, const Color & color, int32_t fontId,
-				int32_t &outTextId, int32_t &outTextWidth, int32_t &outTextHeight){
+void TextContainer::reloadText(const std::string& text, const Color &color,
+								int32_t fontId,	int32_t textId,
+								int32_t &outTextWidth, int32_t &outTextHeight){
 
+	auto it = _fonts.find(fontId);
+	if(it == _fonts.end()){
+		std::cerr << "Error, fontId: " << fontId << " could not be found. Will not reload text: " << text << std::endl;
+		return;
+	}
+
+	freeSlotIndex(textId);
+
+		TTF_Font* font = it->second;	//will point to the second element of the map
+		SDL_Texture* textTexture = nullptr;
+
+		if(EXIT_SUCCESS != Texture::createTextureFromText(
+				text, color, font, textTexture, outTextWidth, outTextHeight)){	//the game will fill the text width of the object
+
+			std::cerr << "Error, createTextureFromText() failed for text: " << text << std::endl;
+			return;
+		}
+
+		_textures[textId] = textTexture;
 }
+
 
 void TextContainer::unloadText(int32_t textId){
 
 	if(0 > textId || textId >= static_cast<int32_t>(_textures.size())){
 		std::cerr <<  "Error, trying to unload non-existing textId: " << textId << std::endl;
+		return;
 	}
+
+	freeSlotIndex(textId);
 }
 
 SDL_Texture* TextContainer::getTextTexture(int32_t textId) const{
-
+	if(0 > textId || textId >= static_cast<int32_t>(_textures.size())){
+		std::cerr <<  "Error, trying to get non-existing textId: " << textId << std::endl;
+		return nullptr;
+	}
+ return _textures[textId];
 }
 
 void TextContainer::occupyFreeSlotIndex(int32_t & outIdx, SDL_Texture* texture){
@@ -101,6 +129,6 @@ void TextContainer::occupyFreeSlotIndex(int32_t & outIdx, SDL_Texture* texture){
 }
 
 void TextContainer::freeSlotIndex(int32_t index){
-
+	Texture::freeTexture(_textures[index]);
 
 }

@@ -29,8 +29,8 @@ public:
 
 	 static int32_t createTextureFromSurface(SDL_Surface*& InOutSurface, SDL_Texture*& outTexture);
 
-	 void createTextureFromText(const std::string& text, const Color & color, TTF_Font* font,
-			 	 	 	 SDL_Texture*& outTexture, int32_t &outTextWidth, int32_t &outTextHeight);
+	 void createTextureFromText(const std::string &text, const Color &color, TTF_Font* font,
+			 	 	 	 SDL_Texture *&outTexture, int32_t &outTextWidth, int32_t &outTextHeight);
 
 
 	 static void freeSurface(SDL_Surface*& outSurface);
