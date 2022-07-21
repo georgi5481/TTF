@@ -11,6 +11,9 @@
 //Own components includes
 #include "sdl_utils/InputEvent.h"
 #include "sdl_utils/containers/ImageContainer.h"
+#include "sdl_utils/containers/TextContainer.h"		//always check if you included your files corectly
+#include "utils/drawings/Color.h"
+#include "utils/drawings/DrawParams.h"
 
 int32_t Game::init([[maybe_unused]]const GameCfg& cfg,
 			const ImageContainer* imageContainerInterface,
@@ -49,18 +52,23 @@ int32_t Game::init([[maybe_unused]]const GameCfg& cfg,
 	pressKeysImg.pos.y += 20;
 	pressKeysImg.widgetType = WidgetType::IMAGE;
 
+	_textContainer->createText( "Hello,  C++ dudes", Colors::ORANGE, cfg.textFontId, helloText.textId, helloText.width, helloText.height);
+
+
+	helloText.pos = Point::ZERO;
+	helloText.widgetType = WidgetType::TEXT;
 
 	return EXIT_SUCCESS;
 }
 
 void Game::deinit(){
-
+	_textContainer->unloadText(helloText.textId);
 }
 
 void Game::draw(std::vector<DrawParams>& outImages){
 	outImages.push_back(pressKeysImg);
 	outImages.push_back(layer2Img);
-
+	outImages.push_back(helloText);
 
 }
 

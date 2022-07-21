@@ -31,7 +31,7 @@ public:
 private:
 	DrawParams pressKeysImg;
 	DrawParams layer2Img;
-	DrawParams helloTest;
+	DrawParams helloText;
 
 	//TODO: remove me later !!!
 	const ImageContainer* _imgContainer = nullptr;
