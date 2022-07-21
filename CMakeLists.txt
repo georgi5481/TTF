@@ -94,9 +94,9 @@ ${PROJECT_NAME}
 		${SDL2_MIXER_LIBRARY}
 )
 #this is a bash script for copying the resource folder
-add_custom_command(
-	TARGET ${PROJECT_NAME} POST_BUILD
-		COMMAND ${CMAKE_COMMAND} -E copy_directory
-		${CMAKE_CURRENT_SOURCE_DIR}/resources/
-		$<TARGET_FILE_DIR:${PROJECT_NAME}>resources/
-	)
+#add_custom_command(
+#	TARGET ${PROJECT_NAME} POST_BUILD
+#		COMMAND ${CMAKE_COMMAND} -E copy_directory
+#		${CMAKE_CURRENT_SOURCE_DIR}/resources/
+#		$<TARGET_FILE_DIR:${PROJECT_NAME}>resources/
+#	)

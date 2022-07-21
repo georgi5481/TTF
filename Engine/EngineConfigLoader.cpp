@@ -56,7 +56,7 @@ static void populateGameConfig(GameCfg& cfg){
 static void populateImageContainerConfig(ImageContainerCfg& cfg){
 
 	ImageCfg imageCfg;
-	imageCfg.location = getFilePath("resources/p/press_keys.png");
+	imageCfg.location = getFilePath("resources/pictures/press_keys.png");
 	imageCfg.height = PRESS_KEYS_WIDTH;
 	imageCfg.width = PRESS_KEYS_HEIGHT;
 
