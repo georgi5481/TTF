@@ -13,15 +13,25 @@
 #include "sdl_utils/containers/ImageContainer.h"
 
 int32_t Game::init([[maybe_unused]]const GameCfg& cfg,
-			const ImageContainer* imageContainerInterface){
+			const ImageContainer* imageContainerInterface,
+			TextContainer* textContainerInterface){
 
 	if(nullptr == imageContainerInterface)
-			{
+	{
 		std::cerr << "Error, nullptr provided for imgContainerInterface" << std::endl;
-			return EXIT_FAILURE;
-			}
+		return EXIT_FAILURE;
+	}
 
 	_imgContainer = imageContainerInterface;
+
+	if(nullptr == textContainerInterface)
+	{
+		std::cerr << "Error, nullptr provided for textContainerInterface" << std::endl;
+		return EXIT_FAILURE;
+	}
+
+	_textContainer = textContainerInterface;
+
 
 
 	layer2Img.rsrcId = cfg.layer2RsrcId;

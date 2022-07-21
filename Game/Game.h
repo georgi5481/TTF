@@ -17,12 +17,13 @@
 //Forward Declaration
 struct InputEvent;
 struct ImageContainer;
+struct TextContainer;
 
 
 class Game {
 public:
 
-	int32_t init(const GameCfg& cfg, const ImageContainer* imageContainerInterface);
+	int32_t init(const GameCfg& cfg, const ImageContainer* imageContainerInterface, TextContainer* textContainerInterface);
 	void deinit();
 	void draw(std::vector<DrawParams>& outImages);
 	void handleEvent(const InputEvent& e);
@@ -30,9 +31,11 @@ public:
 private:
 	DrawParams pressKeysImg;
 	DrawParams layer2Img;
+	DrawParams helloTest;
 
 	//TODO: remove me later !!!
 	const ImageContainer* _imgContainer = nullptr;
+	TextContainer* _textContainer = nullptr;
 
 };
 

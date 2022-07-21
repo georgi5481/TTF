@@ -47,8 +47,7 @@ int32_t Engine::init(const EngineConfig& cfg){
 			return EXIT_FAILURE;
 	}
 
-
-	if (EXIT_SUCCESS != _game.init(cfg.gameCfg, &_imgContainer)){	//load the resources in the window
+	if (EXIT_SUCCESS != _game.init(cfg.gameCfg, &_imgContainer,&_textContainer)){	//load the resources in the window
 			std::cerr << "_game.init() failed." << std::endl;
 			return EXIT_FAILURE;
 	}

@@ -77,7 +77,7 @@ int32_t Texture::createTextureFromSurface(SDL_Surface*& InOutSurface, SDL_Textur
 	return EXIT_SUCCESS;
 }
 
-void Texture::createTextureFromText(const std::string& text, const Color& color, TTF_Font* font,
+int32_t Texture::createTextureFromText(const std::string& text, const Color& color, TTF_Font* font,
  	 	 SDL_Texture *&outTexture, int32_t &outTextWidth, int32_t &outTextHeight){
 
 
@@ -89,13 +89,18 @@ void Texture::createTextureFromText(const std::string& text, const Color& color,
 
 	if(textSurface == nullptr){
 		std::cerr << "TTF_RenderText_Blended() failed. Reason : " << SDL_GetError() << std::endl;
-		return;
+		return EXIT_FAILURE;
 	}
+	outTextWidth = textSurface->w;
+	outTextHeight = textSurface->h;
+
 
 	if(EXIT_SUCCESS != Texture::createTextureFromSurface(textSurface, outTexture)){	//will load it into the GPU
 		std::cerr << "createTextureFromSurface() failed for text : " << text << std::endl;
-		return;
+		return EXIT_FAILURE;
 	}
+
+	return EXIT_SUCCESS;
 
 }
 
