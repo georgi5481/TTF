@@ -30,10 +30,10 @@ constexpr auto ANGELINE_VINTAGE_40_FONTSIZE = 40;	//we can load the same font wi
 }
 
 static std::string getFilePath(const std::string& relativePath){
-#ifdef RELEASE_BUILD
+#ifdef NDEBUG
 	return relativePath;
 #else
-	return"../" + relativePath;
+	return "../" + relativePath;
 #endif
 }
 static void populateMonitorConfig(MonitorWindowCfg& cfg){
@@ -73,7 +73,7 @@ static void populateImageContainerConfig(ImageContainerCfg& cfg){
 
 static void populateTextContainerConfig(TextContainerCfg& cfg){
 	FontCfg fontCfg;
-	fontCfg.location = getFilePath("/resources/fonts/AngelineVintage.ttf");
+	fontCfg.location = getFilePath("resources/fonts/AngelineVintage.ttf");
 	fontCfg.fontSize = ANGELINE_VINTAGE_40_FONTSIZE;
 
 	cfg.fontConfigs.insert(std::make_pair(FontId::ANGELINE_VINTAGE_40,fontCfg));	//we have to pair them first with the ID

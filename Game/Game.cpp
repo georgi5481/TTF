@@ -66,8 +66,8 @@ void Game::deinit(){
 }
 
 void Game::draw(std::vector<DrawParams>& outImages){
-	outImages.push_back(pressKeysImg);
-	outImages.push_back(layer2Img);
+//	outImages.push_back(pressKeysImg);
+//	outImages.push_back(layer2Img);
 	outImages.push_back(helloText);
 
 }
