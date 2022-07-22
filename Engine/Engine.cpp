@@ -101,9 +101,23 @@ SDL_Texture* texture = nullptr;
 
 	for(const DrawParams& image : images){	//will basically print out all images we contained in the map with our flyweight pattern
 
-		//the function bellow accepts only const DrawParams !!! This is why we declare here a const object pointer
-		texture = _imgContainer.getImageTexture(image.rsrcId);
+		if(WidgetType::IMAGE == image.widgetType){
+			//the function bellow accepts only const DrawParams !!! This is why we declare here a const object pointer
+			texture = _imgContainer.getImageTexture(image.rsrcId);
+		}
+		else if(WidgetType::TEXT == image.widgetType){
+			texture = _textContainer.getTextTexture(image.textId);
+		}
+		else{
+			std::cerr << "Error, received unsupported widgetType : " << static_cast<int32_t>(image.widgetType)
+									<< " for rsrcId : " << image.rsrcId << std::endl;
+			continue;
+		}
+
+
 		_renderer.renderTexture(texture,image);
+
+
 	}
 
 }
