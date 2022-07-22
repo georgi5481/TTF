@@ -97,12 +97,11 @@ void Engine::drawFrame(){
 	_game.draw(images);
 
 
-SDL_Texture* texture = nullptr;
+	SDL_Texture* texture = nullptr;
 
 	for(const DrawParams& image : images){	//will basically print out all images we contained in the map with our flyweight pattern
 
 		if(WidgetType::IMAGE == image.widgetType){
-			//the function bellow accepts only const DrawParams !!! This is why we declare here a const object pointer
 			texture = _imgContainer.getImageTexture(image.rsrcId);
 		}
 		else if(WidgetType::TEXT == image.widgetType){
@@ -116,7 +115,6 @@ SDL_Texture* texture = nullptr;
 
 
 		_renderer.renderTexture(texture,image);
-
 
 	}
 

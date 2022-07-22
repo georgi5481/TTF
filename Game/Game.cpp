@@ -15,6 +15,9 @@
 #include "utils/drawings/Color.h"
 #include "utils/drawings/DrawParams.h"
 
+//for demonstration
+static int32_t gFontId;
+
 int32_t Game::init([[maybe_unused]]const GameCfg& cfg,
 			const ImageContainer* imageContainerInterface,
 			TextContainer* textContainerInterface){
@@ -35,7 +38,7 @@ int32_t Game::init([[maybe_unused]]const GameCfg& cfg,
 
 	_textContainer = textContainerInterface;
 
-
+	gFontId = cfg.textFontId;
 
 	layer2Img.rsrcId = cfg.layer2RsrcId;
 	Rectangle rect = _imgContainer->getImageFrame(layer2Img.rsrcId);
@@ -52,10 +55,12 @@ int32_t Game::init([[maybe_unused]]const GameCfg& cfg,
 	pressKeysImg.pos.y += 20;
 	pressKeysImg.widgetType = WidgetType::IMAGE;
 
-	_textContainer->createText( "Hello,  C++ dudes", Colors::ORANGE, cfg.textFontId, helloText.textId, helloText.width, helloText.height);
+	_textContainer->createText( "Hello,  C++ dudes", Colors::GREEN, cfg.textFontId, helloText.textId, helloText.width, helloText.height);
 
 
-	helloText.pos = Point::ZERO;
+//	helloText.pos = Point::ZERO;
+	helloText.pos.x = 150;
+	helloText.pos.y = 150;
 	helloText.widgetType = WidgetType::TEXT;
 
 	return EXIT_SUCCESS;
@@ -66,8 +71,8 @@ void Game::deinit(){
 }
 
 void Game::draw(std::vector<DrawParams>& outImages){
-//	outImages.push_back(pressKeysImg);
-//	outImages.push_back(layer2Img);
+	outImages.push_back(pressKeysImg);
+	outImages.push_back(layer2Img);
 	outImages.push_back(helloText);
 
 }
@@ -118,6 +123,12 @@ void Game::handleEvent([[maybe_unused]]const InputEvent& e){
 		pressKeysImg.opacity += 10;
 		break;
 
+
+		case Keyboard::KEY_N:
+			_textContainer->createText( "Stana li ?", Colors::BLUE, gFontId, helloText.textId, helloText.width, helloText.height);
+
+
+		break;
 		default:
 			break;
 		}
