@@ -38,7 +38,7 @@ int32_t Renderer::init(SDL_Window * window){
 	}
 
 	//SDL_SetRenderDrawColor will place a color on every pixel on the buffer we are clearing
-	if(EXIT_SUCCESS != SDL_SetRenderDrawColor(_sdlRenderer, 200, 200, 0, SDL_ALPHA_OPAQUE)){
+	if(EXIT_SUCCESS != SDL_SetRenderDrawColor(_sdlRenderer, 200, 255, 0, SDL_ALPHA_OPAQUE)){
 		std::cerr << "SDL_SetRenderDrawColor failed. Reason:" << SDL_GetError() << std::endl;
 		return EXIT_FAILURE;
 

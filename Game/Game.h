@@ -35,7 +35,7 @@ private:
 
 	//TODO: remove me later !!!
 	const ImageContainer* _imgContainer = nullptr;
-	TextContainer* _textContainer = nullptr;
+	TextContainer* _textContainer = nullptr;		//we use non constant pointer cuz our functions now make/change some things
 
 };
 

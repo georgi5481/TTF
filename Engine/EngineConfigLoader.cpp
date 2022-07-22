@@ -48,7 +48,7 @@ static void populateMonitorConfig(MonitorWindowCfg& cfg){
 static void populateGameConfig(GameCfg& cfg){
 	cfg.layer2RsrcId = TextureId::LAYER_2;
 	cfg.pressKeysRsrcId = TextureId::PRESS_KEYS;
-	cfg.textFontId = FontId::ANGELINE_VINTAGE_40;	//place unique key for our flyweight dessign pattern
+	cfg.textFontId = FontId::ANGELINE_VINTAGE_40;	//place unique key for our flyweight design pattern
 }
 
 
