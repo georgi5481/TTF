@@ -30,10 +30,10 @@ constexpr auto ANGELINE_VINTAGE_40_FONTSIZE = 40;	//we can load the same font wi
 }
 
 static std::string getFilePath(const std::string& relativePath){
-#ifdef NDEBUG
+#ifdef RELEASE_BUILD
 	return relativePath;
 #else
-	return "../" + relativePath;
+	return relativePath;
 #endif
 }
 static void populateMonitorConfig(MonitorWindowCfg& cfg){
