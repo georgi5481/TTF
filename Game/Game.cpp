@@ -58,9 +58,7 @@ int32_t Game::init([[maybe_unused]]const GameCfg& cfg,
 	_textContainer->createText( "Hello,  C++ dudes", Colors::GREEN, cfg.textFontId, helloText.textId, helloText.width, helloText.height);
 
 
-//	helloText.pos = Point::ZERO;
-	helloText.pos.x = 150;
-	helloText.pos.y = 150;
+	helloText.pos = Point::ZERO;
 	helloText.widgetType = WidgetType::TEXT;
 
 	return EXIT_SUCCESS;
