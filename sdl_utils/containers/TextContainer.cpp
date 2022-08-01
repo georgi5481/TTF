@@ -107,13 +107,13 @@ SDL_Texture* TextContainer::getTextTexture(int32_t textId) const{
 		std::cerr <<  "Error, trying to get non-existing textId: " << textId << std::endl;
 		return nullptr;
 	}
- return _textures[textId];
+ return _textures[textId];	//return the pointer to the texture
 }
 
 void TextContainer::occupyFreeSlotIndex(int32_t & outIdx, SDL_Texture* texture){
 	const int32_t size = static_cast<int32_t>(_textures.size());
 
-	bool foundIdx = false;
+
 	for(int32_t i = 0; i<size; ++i){
 		if(_textures[i] == nullptr){	//found a free index where we can save
 			outIdx = i;
@@ -121,10 +121,8 @@ void TextContainer::occupyFreeSlotIndex(int32_t & outIdx, SDL_Texture* texture){
 			return;
 		}
 	}
-	if(!foundIdx){
 		_textures.push_back(texture);
 		outIdx = size;
-	}
 
 }
 
