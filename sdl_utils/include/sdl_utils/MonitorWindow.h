@@ -10,13 +10,9 @@
 
 //Own includes
 #include "utils/drawings/Rectangle.h"
-#include "utils/drawings/Point.h"
 #include "sdl_utils/config/MonitorWindowCfg.h"
 
 //Forward Declaration
-
-
-
 struct SDL_Window;
 struct SDL_Surface;	//declaring these just so we can create void pointers to a struct/class
 

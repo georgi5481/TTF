@@ -1,5 +1,5 @@
 //Corresponding header
-#include "InputEvent.h"
+#include "sdl_utils/InputEvent.h"
 
 //C system includes
 

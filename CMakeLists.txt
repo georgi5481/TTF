@@ -27,18 +27,6 @@ set(_BASE_DIR ${CMAKE_CURRENT_SOURCE_DIR})	#set a variable name
 add_executable(
 	${PROJECT_NAME} 	
 	${_BASE_DIR}/common/commonDefines.h
-		
-	${_BASE_DIR}/utils/drawings/Point.h
-	${_BASE_DIR}/utils/drawings/Point.cpp
-	${_BASE_DIR}/utils/drawings/Color.h
-	${_BASE_DIR}/utils/drawings/Color.cpp
-	${_BASE_DIR}/utils/drawings/Rectangle.h
-	${_BASE_DIR}/utils/drawings/Rectangle.cpp
-	${_BASE_DIR}/utils/drawings/DrawParams.h
-	${_BASE_DIR}/utils/thread/ThreadUtils.h
-	${_BASE_DIR}/utils/thread/ThreadUtils.cpp
-	${_BASE_DIR}/utils/Time/Time.h
-	${_BASE_DIR}/utils/Time/Time.cpp
 
 	${_BASE_DIR}/Engine/config/EngineConfig.h
 	${_BASE_DIR}/Engine/Engine.h
@@ -50,26 +38,7 @@ add_executable(
 	${_BASE_DIR}/Game/Game.cpp
 	${_BASE_DIR}/Game/config/GameCfg.h
 	
-	${_BASE_DIR}/sdl_utils/config/MonitorWindowCfg.h
-	${_BASE_DIR}/sdl_utils/config/ImageContainerCfg.h
-	${_BASE_DIR}/sdl_utils/config/TextContainerCfg.h
-	
-	${_BASE_DIR}/sdl_utils/SDLLoader.h
-	${_BASE_DIR}/sdl_utils/SDLLoader.cpp 
-	${_BASE_DIR}/sdl_utils/MonitorWindow.cpp
-	${_BASE_DIR}/sdl_utils/MonitorWindow.h	
-	${_BASE_DIR}/sdl_utils/Texture.cpp
-	${_BASE_DIR}/sdl_utils/Texture.h
-	${_BASE_DIR}/sdl_utils/InputEvent.cpp
-	${_BASE_DIR}/sdl_utils/InputEvent.h
-	${_BASE_DIR}/sdl_utils/Renderer.cpp
-	${_BASE_DIR}/sdl_utils/Renderer.h
-	
-	${_BASE_DIR}/sdl_utils/containers/ImageContainer.cpp
-	${_BASE_DIR}/sdl_utils/containers/ImageContainer.h	
-	${_BASE_DIR}/sdl_utils/containers/TextContainer.cpp
-	${_BASE_DIR}/sdl_utils/containers/TextContainer.h	
-	
+
 	${_BASE_DIR}/main.cpp
 	)
 
@@ -80,14 +49,18 @@ target_include_directories(
 ${PROJECT_NAME} 
 	PRIVATE 
 		${_BASE_DIR}
+		PRIVATE
 		${SDL2_INCLUDE_DIR}
 		${SDL2_image_INCLUDE_DIR}
 		${SDL2_MIXER_INCLUDE_DIR}
 		${SDL2_TTF_INCLUDE_DIR}
+
 )
 target_link_libraries(
 ${PROJECT_NAME} 
 	PRIVATE 
+		utils		#we include our library we just made
+		sdl_utils
 		${SDL2_LIBRARY}
 		${SDL2_IMAGE_LIBRARY}
 		${SDL2_TTF_LIBRARY}
@@ -108,3 +81,8 @@ add_custom_command(
 		$<TARGET_FILE_DIR:${PROJECT_NAME}>/resources/
 )
 endif()
+
+add_subdirectory(utils)	#we will import the directory and we will inherit there our variables made here
+add_subdirectory(sdl_utils)
+
+
