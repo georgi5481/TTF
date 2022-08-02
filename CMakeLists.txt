@@ -93,6 +93,13 @@ ${PROJECT_NAME}
 		${SDL2_TTF_LIBRARY}
 		${SDL2_MIXER_LIBRARY}
 )
+
+if(CMAKE_BUILD_TYPE MATCHES Release)
+	target_compile_definitions(
+		${PROJECT_NAME}
+		PRIVATE_HEADER-DRELEASE_BUILD=1
+	)
+
 #this is a bash script for copying the resource folder
 add_custom_command(
 	TARGET ${PROJECT_NAME} POST_BUILD
@@ -100,3 +107,4 @@ add_custom_command(
 		${CMAKE_CURRENT_SOURCE_DIR}/resources/
 		$<TARGET_FILE_DIR:${PROJECT_NAME}>/resources/
 )
+endif()
