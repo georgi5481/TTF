@@ -55,7 +55,8 @@ int32_t Game::init([[maybe_unused]]const GameCfg& cfg,
 	pressKeysImg.pos.y += 20;
 	pressKeysImg.widgetType = WidgetType::IMAGE;
 
-	_textContainer->createText( "Hello,  C++ dudes", Colors::GREEN, cfg.textFontId, helloText.textId, helloText.width, helloText.height);
+	_textContainer->createText( "Hello,  C++ dudes", Colors::GREEN, cfg.textFontId,
+			helloText.textId, helloText.width, helloText.height);
 
 
 	helloText.pos = Point::ZERO;

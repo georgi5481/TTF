@@ -113,11 +113,11 @@ void Engine::drawFrame(){
 			continue;
 		}
 
-
 		_renderer.renderTexture(texture,image);
 
 	}
 
+	_renderer.finishFrame();
 }
 
 

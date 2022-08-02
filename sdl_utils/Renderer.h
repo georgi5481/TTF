@@ -35,8 +35,8 @@ public:
 	void renderTexture(SDL_Texture* texture, const DrawParams& drawParams); //for drawing GPU primitives
 private:
 
-	void DrawText(const DrawParams& drawParams, SDL_Texture* texture);
-	void DrawImage(const DrawParams& drawParams, SDL_Texture* texture);
+	void drawText(const DrawParams& drawParams, SDL_Texture* texture);
+	void drawImage(const DrawParams& drawParams, SDL_Texture* texture);
 	SDL_Renderer *_sdlRenderer = nullptr;
 
 

@@ -66,22 +66,23 @@ void Renderer::clearScreen(){
 }
 
 void Renderer::finishFrame(){
-	SDL_RenderPresent(_sdlRenderer);	//will swap the pointers
+	SDL_RenderPresent(_sdlRenderer);	//will swap the pointers to visualise the updated frame
 }
 
 void Renderer::renderTexture(SDL_Texture* texture, const DrawParams& drawParams){//SDL_Texture is a primitive we are drawing
 	if(WidgetType::IMAGE == drawParams.widgetType){
-		DrawImage(drawParams, texture);
+		drawImage(drawParams, texture);
 	}
 	else if(WidgetType::TEXT == drawParams.widgetType){
-		DrawText(drawParams,texture);
+		drawText(drawParams,texture);
 	}
 	else{
-		std::cerr << "Error unknown widgetType : " << static_cast<int>(drawParams.widgetType) << " for rsrcId : " << drawParams.rsrcId << std::endl;
+		std::cerr << "Error unknown widgetType : " << static_cast<int>(drawParams.widgetType)
+				<< " for rsrcId : " << drawParams.rsrcId << std::endl;
 	}
 }
 
-void Renderer::DrawText(const DrawParams& drawParams, SDL_Texture* texture){
+void Renderer::drawText(const DrawParams& drawParams, SDL_Texture* texture){
 	const SDL_Rect destRect = {.x = drawParams.pos.x, .y = drawParams.pos.y,		//destination rectangle basically sets to place the texture on the left corner with full lenght
 								.w = drawParams.width, .h = drawParams.height };
 
@@ -92,7 +93,7 @@ void Renderer::DrawText(const DrawParams& drawParams, SDL_Texture* texture){
 	}
 }
 
-void Renderer::DrawImage(const DrawParams& drawParams, SDL_Texture* texture){
+void Renderer::drawImage(const DrawParams& drawParams, SDL_Texture* texture){
 
 	const SDL_Rect destRect = {.x = drawParams.pos.x, .y = drawParams.pos.y,		//destination rectangle basically sets to place the texture on the left corner with full lenght
 								.w = drawParams.width, .h = drawParams.height };
