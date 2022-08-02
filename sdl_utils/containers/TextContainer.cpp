@@ -110,7 +110,7 @@ SDL_Texture* TextContainer::getTextTexture(int32_t textId) const{
  return _textures[textId];	//return the pointer to the texture
 }
 
-void TextContainer::occupyFreeSlotIndex(int32_t & outIdx, SDL_Texture* texture){
+void TextContainer::occupyFreeSlotIndex(int32_t& outIdx, SDL_Texture* texture){
 	const int32_t size = static_cast<int32_t>(_textures.size());
 
 
