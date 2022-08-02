@@ -33,6 +33,12 @@ private:
 	DrawParams layer2Img;
 	DrawParams helloText;
 
+	DrawParams pressText;
+	DrawParams hideText;
+
+
+	bool isPressTextHidden = false;
+
 	//TODO: remove me later !!!
 	const ImageContainer* _imgContainer = nullptr;
 	TextContainer* _textContainer = nullptr;		//we use non constant pointer cuz our functions now make/change some things

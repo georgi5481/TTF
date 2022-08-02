@@ -14,8 +14,8 @@
 
 //constants
 namespace{		//the anonymous namespace will work only on this .cpp file
-constexpr auto WINDOW_WIDTH = 800;
-constexpr auto WINDOW_HEIGHT = 600;
+constexpr auto WINDOW_WIDTH = 1000;
+constexpr auto WINDOW_HEIGHT = 800;
 constexpr auto WINDOW_NAME = "Texts";
 
 
@@ -26,7 +26,7 @@ constexpr auto LAYER_2_IMG_WIDTH = 160;
 constexpr auto LAER_2_IMG_HEIGHT = 120;
 
 
-constexpr auto ANGELINE_VINTAGE_40_FONTSIZE = 40;	//we can load the same font with a different size аt the same time
+constexpr auto ANGELINE_VINTAGE_40_FONTSIZE = 120;	//we can load the same font with a different size аt the same time
 }
 
 static std::string getFilePath(const std::string& relativePath){

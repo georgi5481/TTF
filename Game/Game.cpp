@@ -55,12 +55,27 @@ int32_t Game::init([[maybe_unused]]const GameCfg& cfg,
 	pressKeysImg.pos.y += 20;
 	pressKeysImg.widgetType = WidgetType::IMAGE;
 
+
 	_textContainer->createText( "Hello,  C++ dudes", Colors::GREEN, cfg.textFontId,
 			helloText.textId, helloText.width, helloText.height);
-
-
 	helloText.pos = Point::ZERO;
 	helloText.widgetType = WidgetType::TEXT;
+
+
+	_textContainer->createText( "Press M to hide", Colors::GREEN, cfg.textFontId,
+			pressText.textId, pressText.width, pressText.height);
+	pressText.pos = Point::ZERO;
+	pressText.pos.x += 100;
+	pressText.pos.y += 100;
+	pressText.widgetType = WidgetType::TEXT;
+
+
+	_textContainer->createText( "Press N to show", Colors::BLUE, cfg.textFontId,
+			hideText.textId, hideText.width, hideText.height);
+	hideText.pos = Point::ZERO;
+	hideText.pos.x += 500;
+	hideText.pos.y += 500;
+	hideText.widgetType = WidgetType::TEXT;
 
 	return EXIT_SUCCESS;
 }
@@ -73,6 +88,13 @@ void Game::draw(std::vector<DrawParams>& outImages){
 	outImages.push_back(pressKeysImg);
 	outImages.push_back(layer2Img);
 	outImages.push_back(helloText);
+
+	if(isPressTextHidden) {
+		outImages.push_back(hideText);
+	}
+	else{
+		outImages.push_back(pressText);
+	}
 
 }
 
@@ -123,11 +145,19 @@ void Game::handleEvent([[maybe_unused]]const InputEvent& e){
 		break;
 
 
-		case Keyboard::KEY_N:
-			_textContainer->createText( "Stana li ?", Colors::BLUE, gFontId, helloText.textId, helloText.width, helloText.height);
-
-
+		case Keyboard::KEY_B:
+			_textContainer->reloadText( "Stana li ?", Colors::PURPLE, gFontId, helloText.textId, helloText.width, helloText.height);
 		break;
+
+
+		case Keyboard::KEY_M:
+			isPressTextHidden = true;
+		break;
+		case Keyboard::KEY_N:
+			isPressTextHidden = false;
+		break;
+
+
 		default:
 			break;
 		}
